@@ -367,9 +367,8 @@ When considering a travel package, it is important to carefully review the descr
                                           </label>
                                        </div>
                                     </div>
-                                    <div class="col-sm-12">
-                                       <div class="form-group submit-btn">
-                                          <input type="submit" name="submit" value="Boook Now">
+                                    <div class="header-btn">
+                                    <a href="#" class="button-primary" onclick="checkLogin()">BOOK NOW</a>
                                        </div>
                                     </div>
                                  </div>
@@ -431,6 +430,16 @@ When considering a travel package, it is important to carefully review the descr
          <?php include 'footer.php'; ?>
 
       <!-- JavaScript -->
+      <script>
+      function checkLogin() {
+         var loggedIn = <?php echo isset($_SESSION['user_ID']) ? 'true' : 'false'; ?>;
+         if (loggedIn) {
+         window.location.href = "booking.html";
+         } else {
+            window.location.href = "admin/login_aftercheck.html";
+         }
+      }
+      </script>
       <script src="assets/js/jquery.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
       <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>

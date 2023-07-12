@@ -586,88 +586,88 @@
                      </div>
                   </div>
                   <div class="special-inner">
-                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                           <div class="special-item">
-                              <figure class="special-img">
-                                 <img src="assets/images/img9.jpg" alt="">
-                              </figure>
-                              <div class="badge-dis">
-                                 <span>
-                                    <strong>20%</strong>
-                                    off
-                                 </span>
+                  <div class="row">
+                     <div class="col-md-6 col-lg-4">
+                        <div class="special-item">
+                           <figure class="special-img">
+                              <img src="assets/images/img9.jpg" alt="">
+                           </figure>
+                           <div class="badge-dis">
+                              <span>
+                                 <strong>20%</strong>
+                                 off
+                              </span>
+                           </div>
+                           <div class="special-content">
+                              <div class="meta-cat">
+                                 <a href="hello.html">Galle</a>
                               </div>
-                              <div class="special-content">
-                                 <div class="meta-cat">
-                                    <a href="#">Galle</a>
-                                 </div>
-                                 <h3>
-                                    <a href="#">Experience the natural beauty of glacier</a>
-                                 </h3>
-                                 <div class="package-price">
-                                    Price:
-                                    <del>$1500</del>
-                                    <ins>$1200</ins>
-                                 </div>
+                              <h3>
+                                 <a href="package-detail.html">Experience the natural beauty of glacier</a>
+                              </h3>
+                              <div class="package-price">
+                                 Price:
+                                 <del>$1500</del>
+                                 <ins>$1200</ins>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                           <div class="special-item">
-                              <figure class="special-img">
-                                 <img src="assets/images/img10.jpg" alt="">
-                              </figure>
-                              <div class="badge-dis">
-                                 <span>
-                                    <strong>15%</strong>
-                                    off
-                                 </span>
+                     </div>
+                     <div class="col-md-6 col-lg-4">
+                        <div class="special-item">
+                           <figure class="special-img">
+                              <img src="assets/images/img10.jpg" alt="">
+                           </figure>
+                           <div class="badge-dis">
+                              <span>
+                                 <strong>15%</strong>
+                                 off
+                              </span>
+                           </div>
+                           <div class="special-content">
+                              <div class="meta-cat">
+                                 <a href="hello.html">Kandy</a>
                               </div>
-                              <div class="special-content">
-                                 <div class="meta-cat">
-                                    <a href="#">Kandy</a>
-                                 </div>
-                                 <h3>
-                                    <a href="#">Trekking to the mountain camp site</a>
-                                 </h3>
-                                 <div class="package-price">
-                                    Price:
-                                    <del>$1300</del>
-                                    <ins>$1105</ins>
-                                 </div>
+                              <h3>
+                                 <a href="package-detail.html">Trekking to the mountain camp site</a>
+                              </h3>
+                              <div class="package-price">
+                                 Price:
+                                 <del>$1300</del>
+                                 <ins>$1105</ins>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                           <div class="special-item">
-                              <figure class="special-img">
-                                 <img src="assets/images/img11.jpg" alt="">
-                              </figure>
-                              <div class="badge-dis">
-                                 <span>
-                                    <strong>15%</strong>
-                                    off
-                                 </span>
+                     </div>
+                     <div class="col-md-6 col-lg-4">
+                        <div class="special-item">
+                           <figure class="special-img">
+                              <img src="assets/images/img11.jpg" alt="">
+                           </figure>
+                           <div class="badge-dis">
+                              <span>
+                                 <strong>15%</strong>
+                                 off
+                              </span>
+                           </div>
+                           <div class="special-content">
+                              <div class="meta-cat">
+                                 <a href="hello.html">Mathara</a>
                               </div>
-                              <div class="special-content">
-                                 <div class="meta-cat">
-                                    <a href="#">Mathara</a>
-                                 </div>
-                                 <h3>
-                                    <a href="#">Sunset view of beautiful lakeside city</a>
-                                 </h3>
-                                 <div class="package-price">
-                                    Price:
-                                    <del>$1800</del>
-                                    <ins>$1476</ins>
-                                 </div>
+                              <h3>
+                                 <a href="package-detail.html">Sunset view of beautiful lakeside city</a>
+                              </h3>
+                              <div class="package-price">
+                                 Price:
+                                 <del>$1800</del>
+                                 <ins>$1476</ins>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
+
                <div class="btn-wrap text-center">
                         <a href="package-offer.php" class="button-primary">VIEW ALL OFFERS</a>
                      </div>
