@@ -182,7 +182,7 @@
                     </ul>
                 </div>
             </div>
-            <form action="save_pack_data.php" method="POST" enctype="multipart/form-data">
+            <form action="save_destination_data.php" method="POST" enctype="multipart/form-data">
                 <div class="db-info-wrap db-add-tour-wrap">
                     <div class="row">
                         <!-- Listings -->
@@ -191,42 +191,33 @@
                                 <div class="custom-field-wrap">
                                     <div class="form-group">
                                         <label>Destination Name</label>
-                                        <input type="text" name="dest_name">
+                                        <input type="text" name="destination_name" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <textarea name="dest_description"></textarea>
+                                        <textarea name="description" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" name="location" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select name="category" required>
+                                            <option value="Beach">Beach</option>
+                                            <option value="Mountain">Mountain</option>
+                                            <option value="City">City</option>
+                                            <option value="Historical">Historical</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Rating</label>
+                                        <input type="number" name="rating" min="0" max="5" step="0.01" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="dashboard-box">
-                                <div class="custom-field-wrap">
-                                    <h4>Dates and Prices</h4>
-                                    <div class="row">
-                                        
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label>Sale Price</label>
-                                                <input type="text" name="sale_price">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label>Regular Price</label>
-                                                <input type="text" name="reg_price">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label>Discount</label>
-                                                <input type="text" name="discount">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dashboard-box">
-                                <h4>Gallery</h4>
+                                <h4>Main Image</h4>
                                 <div class="custom-field-wrap">
                                     <div class="dragable-field">
                                         <div class="dragable-field-inner">
@@ -234,35 +225,14 @@
                                             <p>or</p>
                                             <div class="upload-input">
                                                 <div class="form-group">
-                                                  <span class="upload-btn">Upload a image</span>
-                                                  <input type="file" name="pack_img_gallery">
+                                                    <span class="upload-btn">Upload an image</span>
+                                                    <input type="file" name="main_img" required>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="dashboard-box">
-                                <h4>Location</h4>
-                                <div class="custom-field-wrap">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Select Map</label>
-                                                <select>
-                                                    <option>Google Map</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>API key</label>
-                                                <input type="text" name="apikey">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
                         </div>
                         <div class="col-lg-4 col-xl-3">
                             <div class="dashboard-box">
@@ -302,39 +272,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="dashboard-box">
-                                <div class="custom-field-wrap db-pop-field-wrap">
-                                    <h4>Popular</h4>
-                                    <div class="form-group">
-                                        <label class="custom-input"><input type="checkbox" name="populer">
-                                            <span class="custom-input-field"></span>
-                                            Use Polpular
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="custom-field-wrap db-pop-field-wrap">
-                                    <h4>Keywords</h4>
-                                    <div class="form-group">
-                                        <input type="text" name="keyword" placeholder="Keywords">
-                                    </div>
-                                </div>
-                                
-                                <div class="custom-field-wrap db-media-field-wrap">
-                                    <h4>Add image</h4>
-                                    <div class="upload-input">
-                                        <div class="form-group">
-                                          <span class="upload-btn">Upload a image</span>
-                                          <input type="file" name="pack_image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>      
+                    </div>
                 </div>
-
-
             </form>
+            
             <!-- Content / End -->
             <!-- Copyrights -->
             <div class="copyrights">
