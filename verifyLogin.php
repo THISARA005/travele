@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['username'] = $username;
 
             // Redirect to hello.html or any other page
-            header("Location: logged_home.php");
+            header("Location: logged_home.php?login=success");
             exit();
         }
     }

@@ -1009,24 +1009,18 @@
       <script src="assets/js/custom.min.js"></script>
       <script>
     function checkLogin() {
-        // Check if the user is logged in
-        // Send an AJAX request to a PHP file that checks the login status
-        // Replace 'check_login.php' with the actual file name
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'check_login.php', true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var response = xhr.responseText;
-                if (response === 'logged_in') {
-                    // User is logged in, redirect to booking page
-                    window.location.href = 'booking.html';
-                } else {
-                    // User is not logged in, display error message
-                    alert('You need to log in to book.');
-                }
-            }
-        };
-        xhr.send();
+         // Check if the user is logged in
+        // Retrieve the query parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const loginStatus = urlParams.get('login');
+
+        if (loginStatus === 'success') {
+            // User is logged in, proceed with booking
+            window.location.href = 'booking.html';
+        } else {
+            // User is not logged in, display error message
+            alert('You need to log in to book.');
+        }
     }
 </script>
 
