@@ -405,7 +405,7 @@ When considering a travel package, it is important to carefully review the descr
                </div>
             </div>
             <!-- subscribe section html start -->
-            <section class="subscribe-section" style="background-image: url(assets/images/img16.jpg);">
+            <section class="subscribe-section" style="background-image: url(assets1/images/img16.jpg);">
                <div class="container">
                   <div class="row">
                      <div class="col-lg-7">
@@ -431,15 +431,28 @@ When considering a travel package, it is important to carefully review the descr
 
       <!-- JavaScript -->
       <script>
-      function checkLogin() {
-         var loggedIn = <?php echo isset($_SESSION['user_ID']) ? 'true' : 'false'; ?>;
-         if (loggedIn) {
-         window.location.href = "booking.html";
-         } else {
-            window.location.href = "admin/login_aftercheck.html";
-         }
-      }
-      </script>
+    function checkLogin() {
+        // Check if the user is logged in
+        // Send an AJAX request to a PHP file that checks the login status
+        // Replace 'check_login.php' with the actual file name
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'check_login.php', true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = xhr.responseText;
+                if (response === 'logged_in') {
+                    // User is logged in, redirect to booking page
+                    window.location.href = 'booking.html';
+                } else {
+                    // User is not logged in, display error message
+                    window.location.href = 'login_aftercheck.html';
+                }
+            }
+        };
+        xhr.send();
+    }
+</script>
+
       <script src="assets/js/jquery.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
       <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>

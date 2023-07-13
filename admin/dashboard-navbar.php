@@ -45,7 +45,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="list-img">
-                                            <img src="assets/images/comment.jpg" alt="">
+                                            <img src="assets1/images/comment.jpg" alt="">
                                         </div>
                                         <div class="notification-content">
                                             <p>You have a notification.</p>
@@ -56,7 +56,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="list-img">
-                                            <img src="assets/images/comment2.jpg" alt="">
+                                            <img src="assets1/images/comment2.jpg" alt="">
                                         </div>
                                         <div class="notification-content">
                                             <p>You have a notification.</p>
@@ -67,7 +67,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="list-img">
-                                            <img src="assets/images/comment3.jpg" alt="">
+                                            <img src="assets1/images/comment3.jpg" alt="">
                                         </div>
                                         <div class="notification-content">
                                             <p>You have a notification.</p>
@@ -92,7 +92,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="list-img">
-                                            <img src="assets/images/comment4.jpg" alt="">
+                                            <img src="assets1/images/comment4.jpg" alt="">
                                         </div>
                                         <div class="notification-content">
                                             <p>You have a notification.</p>
@@ -103,7 +103,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="list-img">
-                                            <img src="assets/images/comment5.jpg" alt="">
+                                            <img src="assets1/images/comment5.jpg" alt="">
                                         </div>
                                         <div class="notification-content">
                                             <p>You have a notification.</p>
@@ -114,7 +114,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="list-img">
-                                            <img src="assets/images/comment6.jpg" alt="">
+                                            <img src="assets1/images/comment6.jpg" alt="">
                                         </div>
                                         <div class="notification-content">
                                             <p>You have a notification.</p>
@@ -129,7 +129,7 @@
                     <div class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">
                             <div class="dropdown-item profile-sec">
-                                <img src="assets/images/comment.jpg" alt="">
+                                <img src="assets1/images/comment.jpg" alt="">
                                 <span>My Account </span>
                                 <i class="fas fa-caret-down"></i>
                             </div>
@@ -146,13 +146,13 @@
                 </div>
             </div>
   </div>
-   <script src="assets/js/jquery-3.2.1.min.js"></script>
+   <script src="assets1/js/jquery-3.2.1.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-   <script src="assets/js/bootstrap.min.js"></script>
-   <script src="assets/js/canvasjs.min.js"></script>
-   <script src="assets/js/counterup.min.js"></script>
-   <script src="assets/js/jquery.slicknav.js"></script>
-   <script src="assets/js/dashboard-custom.js"></script>
+   <script src="assets1/js/bootstrap.min.js"></script>
+   <script src="assets1/js/canvasjs.min.js"></script>
+   <script src="assets1/js/counterup.min.js"></script>
+   <script src="assets1/js/jquery.slicknav.js"></script>
+   <script src="assets1/js/dashboard-custom.js"></script>
 </body>
 
 <!-- Mirrored from cyclonethemes.com/demo/html/padhai/dashboard-addtour.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Feb 2020 09:01:50 GMT -->
