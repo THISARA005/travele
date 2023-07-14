@@ -33,7 +33,7 @@
          </div>
       </div>
       <div id="page" class="full-page">
-      <?php include 'topheader.php'; ?>
+      <?php include 'topHeader.php'; ?>
          
          <main id="content" class="site-main">
             <!-- Home slider html start -->
@@ -1008,13 +1008,19 @@
       <script src="assets/js/custom.min.js"></script>
       <script>
       function checkLogin() {
-         var loggedIn = <?php echo isset($_SESSION['user_ID']) ? 'true' : 'false'; ?>;
-         if (loggedIn) {
-         window.location.href = "booking.html";
-         } else {
-            window.location.href = "admin/login_aftercheck.html";
-         }
-      }
+      const urlParams = new URLSearchParams(window.location.search);
+        const loginStatus = urlParams.get('login');
+        const userId = urlParams.get('user_id');
+
+        if (loginStatus === 'success' && userId) {
+            // User is logged in and has a user_id, proceed with booking
+            // Pass the user_id to the booking.html page if needed
+            window.location.href = 'hello.php?user_id=' + userId;
+        } else {
+            // User is not logged in or user_id is missing, display error message
+            alert('You need to log in to book.');
+        }
+    }
 </script>
    </body>
 </html>

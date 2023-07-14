@@ -28,7 +28,7 @@
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="search" placeholder="Search Now">
-                                <a href="#"><span class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                                <a href="#"><span class="search_btn"><i class="fa fa-search" aria-hidden="true" style="padding-bottom: 5px;"></i></span></a>
                             </div>
                         </form>
                     </div>

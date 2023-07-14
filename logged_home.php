@@ -1,6 +1,10 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
    <head>
+      
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,6 +31,7 @@
       <title>GoGlobe | Travel & Tour Planning  </title>
    </head>
    <body class="home">
+      
       <div id="siteLoader" class="site-loader">
          <div class="preloader-content">
             <img src="assets/images/loader1.gif" alt="">
@@ -38,7 +43,7 @@
          <main id="content" class="site-main">
             <!-- Home slider html start -->
             <section class="home-slider-section">
-               <div class="home-slider">
+               <div class="home-slider" >
                   <div class="home-banner-items">
                      <div class="banner-inner-wrap" style="background-image: url(assets/images/slider-banner-1.jpg);"></div>
                         <div class="banner-content-wrap">
@@ -587,87 +592,87 @@
                      </div>
                   </div>
                   <div class="special-inner">
-                  <div class="row">
-                     <div class="col-md-6 col-lg-4">
-                        <div class="special-item">
-                           <figure class="special-img">
-                              <img src="assets/images/img9.jpg" alt="">
-                           </figure>
-                           <div class="badge-dis">
-                              <span>
-                                 <strong>20%</strong>
-                                 off
-                              </span>
-                           </div>
-                           <div class="special-content">
-                              <div class="meta-cat">
-                                 <a href="hello.html">Galle</a>
+                     <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                           <div class="special-item">
+                              <figure class="special-img">
+                                 <img src="assets/images/img9.jpg" alt="">
+                              </figure>
+                              <div class="badge-dis">
+                                 <span>
+                                    <strong>20%</strong>
+                                    off
+                                 </span>
                               </div>
-                              <h3>
-                                 <a href="package-detail.html">Experience the natural beauty of glacier</a>
-                              </h3>
-                              <div class="package-price">
-                                 Price:
-                                 <del>$1500</del>
-                                 <ins>$1200</ins>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6 col-lg-4">
-                        <div class="special-item">
-                           <figure class="special-img">
-                              <img src="assets/images/img10.jpg" alt="">
-                           </figure>
-                           <div class="badge-dis">
-                              <span>
-                                 <strong>15%</strong>
-                                 off
-                              </span>
-                           </div>
-                           <div class="special-content">
-                              <div class="meta-cat">
-                                 <a href="hello.html">Kandy</a>
-                              </div>
-                              <h3>
-                                 <a href="package-detail.html">Trekking to the mountain camp site</a>
-                              </h3>
-                              <div class="package-price">
-                                 Price:
-                                 <del>$1300</del>
-                                 <ins>$1105</ins>
+                              <div class="special-content">
+                                 <div class="meta-cat">
+                                    <a href="hello.html">Galle</a>
+                                 </div>
+                                 <h3>
+                                    <a href="package-detail.html">Experience the natural beauty of glacier</a>
+                                 </h3>
+                                 <div class="package-price">
+                                    Price:
+                                    <del>$1500</del>
+                                    <ins>$1200</ins>
+                                 </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-md-6 col-lg-4">
-                        <div class="special-item">
-                           <figure class="special-img">
-                              <img src="assets/images/img11.jpg" alt="">
-                           </figure>
-                           <div class="badge-dis">
-                              <span>
-                                 <strong>15%</strong>
-                                 off
-                              </span>
-                           </div>
-                           <div class="special-content">
-                              <div class="meta-cat">
-                                 <a href="hello.html">Mathara</a>
+                        <div class="col-md-6 col-lg-4">
+                           <div class="special-item">
+                              <figure class="special-img">
+                                 <img src="assets/images/img10.jpg" alt="">
+                              </figure>
+                              <div class="badge-dis">
+                                 <span>
+                                    <strong>15%</strong>
+                                    off
+                                 </span>
                               </div>
-                              <h3>
-                                 <a href="package-detail.html">Sunset view of beautiful lakeside city</a>
-                              </h3>
-                              <div class="package-price">
-                                 Price:
-                                 <del>$1800</del>
-                                 <ins>$1476</ins>
+                              <div class="special-content">
+                                 <div class="meta-cat">
+                                    <a href="hello.html">Kandy</a>
+                                 </div>
+                                 <h3>
+                                    <a href="package-detail.html">Trekking to the mountain camp site</a>
+                                 </h3>
+                                 <div class="package-price">
+                                    Price:
+                                    <del>$1300</del>
+                                    <ins>$1105</ins>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                           <div class="special-item">
+                              <figure class="special-img">
+                                 <img src="assets/images/img11.jpg" alt="">
+                              </figure>
+                              <div class="badge-dis">
+                                 <span>
+                                    <strong>15%</strong>
+                                    off
+                                 </span>
+                              </div>
+                              <div class="special-content">
+                                 <div class="meta-cat">
+                                    <a href="hello.html">Mathara</a>
+                                 </div>
+                                 <h3>
+                                    <a href="package-detail.html">Sunset view of beautiful lakeside city</a>
+                                 </h3>
+                                 <div class="package-price">
+                                    Price:
+                                    <del>$1800</del>
+                                    <ins>$1476</ins>
+                                 </div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               </div>
 
                <div class="btn-wrap text-center">
                         <a href="package-offer.php" class="button-primary">VIEW ALL OFFERS</a>
@@ -1009,16 +1014,16 @@
       <script src="assets/js/custom.min.js"></script>
       <script>
     function checkLogin() {
-         // Check if the user is logged in
-        // Retrieve the query parameter from the URL
-        const urlParams = new URLSearchParams(window.location.search);
+      const urlParams = new URLSearchParams(window.location.search);
         const loginStatus = urlParams.get('login');
+        const userId = urlParams.get('user_id');
 
-        if (loginStatus === 'success') {
-            // User is logged in, proceed with booking
-            window.location.href = 'booking.html';
+        if (loginStatus === 'success' && userId) {
+            // User is logged in and has a user_id, proceed with booking
+            // Pass the user_id to the booking.html page if needed
+            window.location.href = 'tour-cart.php?user_id=' + userId;
         } else {
-            // User is not logged in, display error message
+            // User is not logged in or user_id is missing, display error message
             alert('You need to log in to book.');
         }
     }
