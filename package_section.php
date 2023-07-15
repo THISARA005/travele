@@ -1,0 +1,120 @@
+<?php
+
+// Assuming you have established a database connection ($mysqli)
+
+// Database connection configuration
+$host = 'localhost';     // MySQL server hostname
+$username = 'root';  // MySQL username
+$password = '';  // MySQL password
+$database = 'goglobetravel';  // MySQL database name
+
+// Create a new MySQLi object
+$mysqli = new mysqli($host, $username, $password, $database);
+
+// Check the connection
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+    // You can handle the connection error gracefully based on your requirements
+    exit();
+}
+
+
+
+$query = "SELECT * FROM packages ORDER BY ratings DESC LIMIT 3";
+$result = mysqli_query($mysqli, $query);
+
+if ($result && mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+       $thumbnail = $row['thumb_image'];
+
+        // Create a base64 encoded string from the image data
+        
+        $price = $row['reg_price'];
+        $duration_day = $row['duration_days'];
+        $duration_night = $row['duration_nights'];
+        $people = $row['grp_size'];
+    
+        $title = $row['title'];
+        $ratings = $row['ratings'];
+        
+        $description = $row['pack_description'];
+        
+
+        echo "<div class='col-lg-4 col-md-6'>
+        <div class='package-wrap'>
+           <figure class='feature-image'>
+              <a href='package-detail.php'>
+                <img src= $thumbnail>
+              </a>
+           </figure>
+           <div class='package-price'>
+              <h6>
+                 <span>$price</span> / per person
+              </h6>
+           </div>
+           <div class='package-content-wrap'>
+              <div class='package-meta text-center'>
+                 <ul>
+                    <li>
+                       <i class='far fa-clock'></i>
+                       $duration_day'/'$duration_night
+                    </li>
+                    <li>
+                       <i class='fas fa-user-friends'></i>
+                       People: $people
+                    </li>
+                    <li>
+                       <i class='fas fa-map-marker-alt'></i>
+                       Galle
+                    </li>
+                 </ul>
+              </div>
+              <div class='package-content'>
+                 <h3>
+                    <a href='package-detail.php'>$title</a>
+                 </h3>
+                 <div class='review-area'>
+                    <span class='review-text'>(25 reviews)</span>
+                    <div class='rating-start' title='$ratings 5 out of 5'>
+                       <span style='width: 60%'></span>
+                    </div>
+                 </div>
+                 <p>$description</p>
+                 <div class='btn-wrap'>
+                 <a href='#' class='button-text width-6' onclick='checkLogin()'>Read more<i class='fas fa-arrow-right'></i></a>
+                    <a href='#' class='button-text width-6'>Wish List<i class='far fa-heart'></i></a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>";
+
+
+        // Start package section
+    
+        // End package section
+    }
+} else {
+    echo "No packages found.";
+}
+
+// Remember to close the database connection
+mysqli_close($mysqli);
+?>
+
+<script>
+    function checkLogin() {
+      const urlParams = new URLSearchParams(window.location.search);
+        const loginStatus = urlParams.get('login');
+        const userId = urlParams.get('user_id');
+
+        if (loginStatus === 'success' && userId) {
+            // User is logged in and has a user_id, proceed with booking
+            // Pass the user_id to the booking.html page if needed
+            window.location.href = 'tour-cart.php?user_id=' + userId;
+        } else {
+            // User is not logged in or user_id is missing, display error message
+            alert('You need to log in to book.');
+        }
+    }
+</script>

@@ -432,24 +432,18 @@ When considering a travel package, it is important to carefully review the descr
       <!-- JavaScript -->
       <script>
     function checkLogin() {
-        // Check if the user is logged in
-        // Send an AJAX request to a PHP file that checks the login status
-        // Replace 'check_login.php' with the actual file name
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'check_login.php', true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var response = xhr.responseText;
-                if (response === 'logged_in') {
-                    // User is logged in, redirect to booking page
-                    window.location.href = 'booking.html';
-                } else {
-                    // User is not logged in, display error message
-                    window.location.href = 'login_aftercheck.html';
-                }
-            }
-        };
-        xhr.send();
+      const urlParams = new URLSearchParams(window.location.search);
+        const loginStatus = urlParams.get('login');
+        const userId = urlParams.get('user_id');
+
+        if ( userId) {
+            // User is logged in and has a user_id, proceed with booking
+            // Pass the user_id to the booking.html page if needed
+            window.location.href = 'tour-cart.php?user_id=' + userId;
+        } else {
+            // User is not logged in or user_id is missing, display error message
+            alert('You need to log in to book.');
+        }
     }
 </script>
 

@@ -38,7 +38,8 @@ session_start();
          </div>
       </div>
       <div id="page" class="full-page">
-      <?php include 'dashboard-navbar.php'; ?>
+  
+      <?php include 'logged_page_Header.php'; ?>
          
          <main id="content" class="site-main">
             <!-- Home slider html start -->
@@ -227,150 +228,8 @@ session_start();
                   </div>
                   <div class="package-inner">
                      <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                           <div class="package-wrap">
-                              <figure class="feature-image">
-                                 <a href="package-detail.php">
-                                    <img src="assets/images/img5.jpg" alt="">
-                                 </a>
-                              </figure>
-                              <div class="package-price">
-                                 <h6>
-                                    <span>$1,900 </span> / per person
-                                 </h6>
-                              </div>
-                              <div class="package-content-wrap">
-                                 <div class="package-meta text-center">
-                                    <ul>
-                                       <li>
-                                          <i class="far fa-clock"></i>
-                                          7D/6N
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-user-friends"></i>
-                                          People: 5
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-map-marker-alt"></i>
-                                          Galle
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="package-content">
-                                    <h3>
-                                       <a href="#">Sunset view of beautiful lakeside resident</a>
-                                    </h3>
-                                    <div class="review-area">
-                                       <span class="review-text">(25 reviews)</span>
-                                       <div class="rating-start" title="Rated 5 out of 5">
-                                          <span style="width: 60%"></span>
-                                       </div>
-                                    </div>
-                                    <p>Embrace the serene beauty of a lakeside residence as the sun sets. Witness the captivating view, where the tranquil waters and vibrant skies create a magical ambiance. Immerse yourself in the moment and let the breathtaking sunset scene leave you in awe.</p>
-                                    <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6" onclick="checkLogin()">Book Now<i class="fas fa-arrow-right"></i></a>
-                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                       <div class="col-lg-4 col-md-6">
-                           <div class="package-wrap">
-                              <figure class="feature-image">
-                                 <a href="#">
-                                    <img src="assets/images/img6.jpg" alt="">
-                                 </a>
-                              </figure>
-                              <div class="package-price">
-                                 <h6>
-                                    <span>$1,230 </span> / per person
-                                 </h6>
-                              </div>
-                              <div class="package-content-wrap">
-                                 <div class="package-meta text-center">
-                                    <ul>
-                                       <li>
-                                          <i class="far fa-clock"></i>
-                                          5D/4N
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-user-friends"></i>
-                                          People: 8
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-map-marker-alt"></i>
-                                          Kandy
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="package-content">
-                                    <h3>
-                                       <a href="#">Temple of tooth relic</a>
-                                    </h3>
-                                    <div class="review-area">
-                                       <span class="review-text">(17 reviews)</span>
-                                       <div class="rating-start" title="Rated 5 out of 5">
-                                          <span style="width: 100%"></span>
-                                       </div>
-                                    </div>
-                                    <p>Unveil the divine aura of the Temple of the Tooth Relic, a sacred sanctuary where the sacred tooth relic of Lord Buddha resides. Immerse yourself in centuries of spiritual heritage, witnessing the profound reverence and exquisite architecture. Experience a moment of serenity and embrace the timeless significance of this revered site.</p>
-                                    <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6" onclick="checkLogin()">Book Now<i class="fas fa-arrow-right"></i></a>
-                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                           <div class="package-wrap">
-                              <figure class="feature-image">
-                                 <a href="#">
-                                    <img src="assets/images/img7.jpg" alt="">
-                                 </a>
-                              </figure>
-                              <div class="package-price">
-                                 <h6>
-                                    <span>$2,000 </span> / per person
-                                 </h6>
-                              </div>
-                              <div class="package-content-wrap">
-                                 <div class="package-meta text-center">
-                                    <ul>
-                                       <li>
-                                          <i class="far fa-clock"></i>
-                                          6D/5N
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-user-friends"></i>
-                                          People: 6
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-map-marker-alt"></i>
-                                          Galle
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="package-content">
-                                    <h3>
-                                       <a href="#">Vacation to the water city of Galle</a>
-                                    </h3>
-                                    <div class="review-area">
-                                       <span class="review-text">(22 reviews)</span>
-                                       <div class="rating-start" title="Rated 5 out of 5">
-                                          <span style="width: 80%"></span>
-                                       </div>
-                                    </div>
-                                    <p>Escape to the enchanting water city of Galle. Immerse yourself in history, culture, and coastal beauty. Discover the captivating charm of ancient fortifications, pristine beaches, and delightful cuisine. Galle awaits, ready to make your vacation unforgettable.</p>
-                                    <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6" onclick="checkLogin()">Book Now<i class="fas fa-arrow-right"></i></a>
-                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                        
+                    <?php include 'package_section.php'; ?>
                      </div>
                      
                   </div>
@@ -1021,7 +880,7 @@ session_start();
         if (loginStatus === 'success' && userId) {
             // User is logged in and has a user_id, proceed with booking
             // Pass the user_id to the booking.html page if needed
-            window.location.href = 'tour-cart.php?user_id=' + userId;
+            window.location.href = 'package-detail.php?user_id=' + userId;
         } else {
             // User is not logged in or user_id is missing, display error message
             alert('You need to log in to book.');

@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user_id = $row['user_id'];
 
         // Redirect to the page containing the "Book Now" button with login status and user_id
-        header("Location: hello.php?login=success&user_id=" . $user_id);
+        header("Location: logged_home.php?login=success&user_id=" . $user_id);
         exit();
     }
         }
