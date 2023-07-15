@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $discount = $_POST['discount'];
     $populer = isset($_POST['populer']) ? 1 : 0;
     $keyword = $_POST['keyword'];
+    $rating = $_POST['rating'];
 
     // File upload handling
     $pack_image = $_FILES['pack_image']['name'];
@@ -24,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     move_uploaded_file($pack_image_tmp, 'uploads/' . $pack_image);
 
     // Insert data into database
-    $sql = "INSERT INTO packages (title, pack_description, grp_size, duration_days, duration_nights, category, sale_price, reg_price, discount, populer, keywords, thumb_image) 
-            VALUES ('$title', '$pack_description', $grpSize, $duration_days, $duration_nights, '$pack_category', $sale_price, $reg_price, $discount, $populer, '$keyword', '$pack_image')";
+    $sql = "INSERT INTO packages (title, pack_description, grp_size, duration_days, duration_nights, category, sale_price, reg_price, discount, populer, keywords, thumb_image,ratings) 
+            VALUES ('$title', '$pack_description', $grpSize, $duration_days, $duration_nights, '$pack_category', $sale_price, $reg_price, $discount, $populer, '$keyword', '$pack_image','$rating')";
     
     if (mysqli_query($conn, $sql)) {
         echo "Data stored successfully in the 'packages' table.";
