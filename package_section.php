@@ -26,7 +26,7 @@ $result = mysqli_query($mysqli, $query);
 if ($result && mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
        $thumbnail = $row['thumb_image'];
-
+        $pack_id = $row['pack_ID'];
         // Create a base64 encoded string from the image data
         
         $price = $row['reg_price'];
@@ -81,7 +81,8 @@ if ($result && mysqli_num_rows($result) > 0) {
                  </div>
                  <p>$description</p>
                  <div class='btn-wrap'>
-                 <a href='#' class='button-text width-6' onclick='checkLogin()'>Read more<i class='fas fa-arrow-right'></i></a>
+                 <a href='#' class='button-text width-6' onclick='checkLogin($pack_id)'>Read more<i class='fas fa-arrow-right'></i></a>
+
                     <a href='#' class='button-text width-6'>Wish List<i class='far fa-heart'></i></a>
                  </div>
               </div>
@@ -101,20 +102,3 @@ if ($result && mysqli_num_rows($result) > 0) {
 // Remember to close the database connection
 mysqli_close($mysqli);
 ?>
-
-<script>
-    function checkLogin() {
-      const urlParams = new URLSearchParams(window.location.search);
-        const loginStatus = urlParams.get('login');
-        const userId = urlParams.get('user_id');
-
-        if (loginStatus === 'success' && userId) {
-            // User is logged in and has a user_id, proceed with booking
-            // Pass the user_id to the booking.html page if needed
-            window.location.href = 'tour-cart.php?user_id=' + userId;
-        } else {
-            // User is not logged in or user_id is missing, display error message
-            alert('You need to log in to book.');
-        }
-    }
-</script>

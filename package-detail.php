@@ -33,7 +33,7 @@
          </div>
       </div>
       <div id="page" class="full-page">
-      <?php include 'topheader.php'; ?>
+      <?php include 'logged_page_Header.php'; ?>
          <main id="content" class="site-main">
             <!-- Inner Banner html start-->
             <section class="inner-banner-wrap">

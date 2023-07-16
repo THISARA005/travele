@@ -872,20 +872,20 @@ session_start();
       <script src="assets/js/jquery.slicknav.js"></script>
       <script src="assets/js/custom.min.js"></script>
       <script>
-    function checkLogin() {
-      const urlParams = new URLSearchParams(window.location.search);
-        const loginStatus = urlParams.get('login');
-        const userId = urlParams.get('user_id');
-
-        if (loginStatus === 'success' && userId) {
-            // User is logged in and has a user_id, proceed with booking
-            // Pass the user_id to the booking.html page if needed
-            window.location.href = 'package-detail.php?user_id=' + userId;
-        } else {
-            // User is not logged in or user_id is missing, display error message
-            alert('You need to log in to book.');
-        }
+   function checkLogin(pack_ID) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const loginStatus = urlParams.get('login');
+    const userId = urlParams.get('user_id');
+    const packId = pack_ID;
+    if (loginStatus === 'success' && userId) {
+        // User is logged in and has a user_id, proceed with booking
+        // Pass the user_id and pack_id to the booking.html page if needed
+        window.location.href = 'package-detail.php?user_id=' + userId + '&pack_id=' + packId;
+    } else {
+        // User is not logged in or user_id is missing, display error message
+        alert('You need to log in to book.');
     }
+   }
 </script>
 
    </body>

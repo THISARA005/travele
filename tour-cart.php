@@ -76,9 +76,9 @@ session_start();
                             <thead>
                               <tr>
                                 <th></th>
-                                <th>Product Name</th>
+                                <th>Package Name</th>
                                 <th>Price</th>
-                                <th>Quantity</th>
+                                <th>Check In Date</th>
                                 <th>Sub Total</th>
                               </tr>
                             </thead>
@@ -100,39 +100,9 @@ session_start();
                                 <td data-column="Sub Total">$ 1100.00</td>
                               </tr>
                             </tbody>
-                            <tr>
-                                <td class="">
-                                  <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                  <span class="cartImage"><img src="assets/images/img6.jpg" alt="image"></span>
-                                </td>
-                                <td data-column="Product Name">Experience the natural beauty of island</td>
-                                <td data-column="Price">$ 1150.00</td>
-                                <td data-column="Quantity" class="count-input">
-                                    <div>
-                                       <a class="minus-btn" href="#"><i class="fa fa-minus"></i></a>
-                                       <input class="quantity" type="text" value="1">
-                                       <a class="plus-btn" href="#"><i class="fa fa-plus"></i></a>
-                                    </div>
-                                </td>
-                                <td data-column="Sub Total">$ 1150.00</td>
-                              </tr>
+                            
                             </tbody>
-                            <tr>
-                                <td class="">
-                                  <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                  <span class="cartImage"><img src="assets/images/img7.jpg" alt="image"></span>
-                                </td>
-                                <td data-column="Product Name">Vacation to the water city of Portugal</td>
-                                <td data-column="Price">$ 1150.00</td>
-                                <td data-column="Quantity" class="count-input">
-                                    <div>
-                                       <a class="minus-btn" href="#"><i class="fa fa-minus"></i></a>
-                                       <input class="quantity" type="text" value="1">
-                                       <a class="plus-btn" href="#"><i class="fa fa-plus"></i></a>
-                                    </div>
-                                </td>
-                                <td data-column="Sub Total">$ 1150.00</td>
-                              </tr>
+                            
                             </tbody>
                           </table>
                         </div>
