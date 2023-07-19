@@ -37,7 +37,7 @@ session_start();
       </div>
       <div id="page" class="full-page">
       <?php include 'logged_page_Header.php'; ?>
-    
+      <?php $pack_id = $_GET['pack_id']; ?>
          </header>
          <main id="content" class="site-main">
             <!-- Inner Banner html start-->
@@ -82,25 +82,8 @@ session_start();
                                 <th>Sub Total</th>
                               </tr>
                             </thead>
-                            <tbody>
-                              <tr>
-                                <td class="">
-                                  <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                  <span class="cartImage"><img src="assets/images/img5.jpg" alt="image"></span>
-                                </td>
-                                <td data-column="Product Name">Sunset view of beautiful lakeside resident</td>
-                                <td data-column="Price">$ 1100.00</td>
-                                <td data-column="Quantity" class="count-input">
-                                    <div>
-                                       <a class="minus-btn" href="#"><i class="fa fa-minus"></i></a>
-                                       <input class="quantity" type="text" value="1">
-                                       <a class="plus-btn" href="#"><i class="fa fa-plus"></i></a>
-                                    </div>
-                                </td>
-                                <td data-column="Sub Total">$ 1100.00</td>
-                              </tr>
-                            </tbody>
                             
+                            <?php include 'cart-details.php'; ?>
                             </tbody>
                             
                             </tbody>
@@ -111,17 +94,21 @@ session_start();
                               <input type="text" class="form-control" placeholder="I have a discount coupon">
                               <a href="#" class="outline-primary">apply coupon</a>
                           </div>
-                           <a href="#" class="outline-primary update-btn">update cart</a>
+                          
+                        <!-- <a href="#" class="outline-primary update-btn" id="updateCartBtn" onclick="updateCart()">Update cart</a>  -->
+                          <a href="#" class="outline-primary update-btn" id="clearCartBtn "onclick="clearCart()">Clear cart</a>
+
                         </div>
-                        <div class="totalAmountArea">
+                        <!-- <div class="totalAmountArea">
                            <ul class="list-unstyled">
                               <li><strong>Sub Total</strong> <span>$ 3400.00</span></li>
                               <li><strong>Vat</strong> <span>$ 18.00</span></li>
                               <li><strong>Grand Total</strong> <span class="grandTotal">$ 4012.00</span></li>
                            </ul>
-                        </div>
+                        </div> -->
+                        <?php include 'cart-price-section.php'; ?>
                         <div class="checkBtnArea text-right">
-                          <a  class="button-primary" onclick="checkLoginforcheckout()">checkout</a>
+                          <a class="button-primary" onclick="checkLoginforcheckout()">checkout</a>
                         </div>
                       </form>
                   </div>
@@ -285,21 +272,64 @@ session_start();
         }
         
     }
-    function checkLoginforcheckout() {
-      const urlParams = new URLSearchParams(window.location.search);
-        const loginStatus = urlParams.get('login');
-        const userId = urlParams.get('user_id');
+    function updateCart() {
+  // Retrieve the pack_id from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const packId = urlParams.get('pack_id');
+  const userId = urlParams.get('user_id');
+      
+  // Make sure pack_id is available
 
-        if ( userId) {
+  if (packId && userId) {
             // User is logged in and has a user_id, proceed with booking
             // Pass the user_id to the booking.html page if needed
-            window.location.href = 'booking.php?user_id=' + userId;
+            window.location.href = 'update_cart.php?user_id=' + userId + '&pack_id=' + packId;
         } else {
             // User is not logged in or user_id is missing, display error message
             alert('You need to log in to book.');
         }
+}
+
+function clearCart() {
+  // Retrieve the pack_id from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const packId = urlParams.get('pack_id');
+  const userId = urlParams.get('user_id');
+      
+  // Make sure pack_id is available
+
+  if (packId && userId) {
+            // User is logged in and has a user_id, proceed with booking
+            // Pass the user_id to the booking.html page if needed
+            window.location.href = 'clear_cart.php?user_id=' + userId + '&pack_id=' + packId;
+        } else {
+            // User is not logged in or user_id is missing, display error message
+            alert('You need to log in to book.');
+        }
+}
+
+
+   function checkLoginforcheckout() {
+      const urlParams = new URLSearchParams(window.location.search);
+         const loginStatus = urlParams.get('login');
+         const userId = urlParams.get('user_id');
+         const packId = urlParams.get('pack_id');
+        
+        
+         if (userId) {
+
+            window.location.href = 'booking.php?user_id=' + userId + '&pack_id=' + packId;
+
+         } else {
+            // User is not logged in or user_id is missing, display error message
+            alert('You need to log in to book.');
+         }
         
     }
+
+
+   
+
       </script>
       <!-- JavaScript -->
       <script src="assets/js/jquery.js"></script>

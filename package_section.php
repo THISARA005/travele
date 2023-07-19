@@ -19,7 +19,6 @@ if ($mysqli->connect_errno) {
 }
 
 
-
 $query = "SELECT * FROM packages ORDER BY ratings DESC LIMIT 3";
 $result = mysqli_query($mysqli, $query);
 

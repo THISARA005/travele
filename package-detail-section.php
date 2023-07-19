@@ -19,6 +19,8 @@ if ($mysqli->connect_errno) {
 }
 
 $pack_id = $_GET['pack_id'];
+
+
 $query = "SELECT * FROM packages where pack_ID = $pack_id";
 $result = mysqli_query($mysqli, $query);
 

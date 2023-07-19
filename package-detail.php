@@ -34,6 +34,7 @@
       </div>
       <div id="page" class="full-page">
       <?php include 'logged_page_Header.php'; ?>
+      
          <main id="content" class="site-main">
             <!-- Inner Banner html start-->
             <section class="inner-banner-wrap">
@@ -56,26 +57,27 @@
                         <?php include 'pack-price-section.php'; ?>
                            <div class="widget-bg booking-form-wrap">
                               <h4 class="bg-title">Booking</h4>
-                              <form class="booking-form">
+                              <form class="booking-form" action="booking-section.php?user_id=<?php echo $_GET['user_id']; ?>&pack_id=<?php echo $_GET['pack_id']; ?>" method="POST" >
+                             
                                  <div class="row">
                                     <div class="col-sm-12">
                                        <div class="form-group">
-                                          <input name="name_booking" type="text" placeholder="Full Name">
+                                          <input name="name_booking" type="text" placeholder="Full Name" >
                                        </div>
                                     </div>
                                     <div class="col-sm-12">
                                        <div class="form-group">
-                                          <input name="email_booking" type="text" placeholder="Email">
+                                          <input name="email_booking" type="text" placeholder="Email" >
                                        </div>
                                     </div>
                                     <div class="col-sm-12">
                                        <div class="form-group">
-                                          <input name="phone_booking" type="text" placeholder="Number">
+                                          <input name="phone_booking" type="text" placeholder="Number" >
                                        </div>
                                     </div>
                                     <div class="col-sm-12">
                                        <div class="form-group">
-                                          <input class="input-date-picker" type="text" name="s" autocomplete="off" readonly="readonly" placeholder="Date">
+                                          <input class="input-date-picker" type="text" name="date" autocomplete="off" readonly="readonly" placeholder="Check in Date" >
                                        </div>
                                     </div>
                                     <div class="col-sm-12">
@@ -118,7 +120,8 @@
                                        </div>
                                     </div>
                                     <div class="header-btn">
-                                    <a href="#" class="button-primary" onclick="checkLogin()">BOOK NOW</a>
+                                    <!-- <a href="#" class="button-primary" onclick="checkLogin()" type="submit">BOOK NOW</a> -->
+                                    <input type="submit" class="button-primary" name="submit" onclick="checkLogin()" value="Add to cart">
                                        </div>
                                     </div>
                                  </div>
@@ -131,7 +134,7 @@
                               <a href="#" class="button-primary">GET A QUOTE</a>
                            </div>
                            <div class="travel-package-content text-center" style="background-image: url(assets/images/img11.jpg);">
-                              <h5>MORE PACKAGES</h5>
+                          
                               <h3>OTHER TRAVEL PACKAGES</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus.</p>
                               <ul>
@@ -148,6 +151,7 @@
                                     <a href="#"><i class="far fa-arrow-alt-circle-right"></i>Weekend packages</a>
                                  </li>
                               </ul>
+                           
                            </div>
                         </div>
                      </div>
@@ -182,19 +186,21 @@
       <!-- JavaScript -->
       <script>
     function checkLogin() {
-      const urlParams = new URLSearchParams(window.location.search);
-        const loginStatus = urlParams.get('login');
-        const userId = urlParams.get('user_id');
-
-        if ( userId) {
-            // User is logged in and has a user_id, proceed with booking
-            // Pass the user_id to the booking.html page if needed
-            window.location.href = 'tour-cart.php?user_id=' + userId;
-        } else {
-            // User is not logged in or user_id is missing, display error message
-            alert('You need to log in to book.');
-        }
+    const urlParams = new URLSearchParams(window.location.search);
+    const loginStatus = urlParams.get('login');
+    const userId = urlParams.get('user_id');
+    const packId = urlParams.get('pack_id');
+    
+    if (userId) {
+        // User is logged in and has a user_id, proceed with booking
+        // Pass the user_id and pack_id to the booking.html page if needed
+        //window.location.href = 'insert_cart.php?user_id=' + userId + '&pack_id=' + packId;
+        window.location.href = 'booking-section.php?user_id=' + userId + '&pack_id=' + packId;
+    } else {
+        // User is not logged in or user_id is missing, display error message
+        alert('You need to log in to book.');
     }
+   }
 </script>
 
       <script src="assets/js/jquery.js"></script>
