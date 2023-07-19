@@ -158,11 +158,15 @@
                               <a href="#">Profile</a>
                               <ul>
                               <li>
+                                    <a href="gallery.html">Profile</a>
+                                 </li>
+                              <li>
                                     <a href="gallery.html">Settings</a>
                                  </li>
                                  <li>
                                     <a href="destination.php">Log Out</a>
                                  </li>
+                                 
                                 
                               </ul>
                            </li>

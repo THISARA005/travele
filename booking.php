@@ -144,7 +144,7 @@
                                     I accept terms and conditions and general policy.
                                  </label>
                               </div>
-                              <input type="submit" class="button-primary" name="submit"  value="Pay Now">
+                              <input type="submit" class="button-primary" name="submit" onclick="checkLogin()" value="Pay Now">
 
                            </div>
 
