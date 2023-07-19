@@ -32,13 +32,13 @@
                         <li><a><i class="fas fa-user"></i>Blog</a>
                             <ul>
                                 <li>
-                                    <a href="user.html">Blog List</a>
+                                    <a href="testimonial-page.html">Blog List</a>
                                 </li>
                                 <li>
-                                    <a href="user-edit.html"> Write a blog</a>
+                                    <a href="add-blog.php"> Write a blog</a>
                                 </li>
                                 <li>
-                                    <a href="new-user.html">See review</a>
+                                    <a href="#">See review</a>
                                 </li>
                             </ul>
                         </li>
@@ -53,8 +53,9 @@
                         </li>
                         <li><a href="db-add-package.html"><i class="fas fa-umbrella-beach"></i>Add destination</a></li>
                         <li><a href="db-booking.html"><i class="fas fa-ticket-alt"></i> Booking History</a></li>
+                        <li><a href="user-edit.html"><i class="fas fa-sign-out-alt"></i> Change Profile</a></li>
                         <li><a href="db-wishlist.html"><i class="far fa-heart"></i>Enquiry</a></li>
-                        <li><a href="db-comment.html"><i class="fas fa-comments"></i>Badges</a></li>
+                        <li><a href="db-comment.html"><i class="fas fa-comments"></i>Badges</a></li>        
                         <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </div>
