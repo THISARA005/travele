@@ -25,6 +25,11 @@
       <!-- Custom CSS -->
       <link rel="stylesheet" type="text/css" href="style.css">
       <title>Travele | Travel & Tour HTML5 template </title>
+      <style>
+   .checkbox-list input[type="checkbox"]:not(:checked) + .custom-checkbox::before {
+      border-color: red;
+   }
+</style>
    </head>
    <body>
       <div id="siteLoader" class="site-loader">
@@ -66,45 +71,9 @@
                   <div class="row">
                      <div class="col-lg-8 right-sidebar">
                         <!-- step one form html start -->
+                        <forma ction="booking-invoice.php?user_id=<?php echo $_GET['user_id']; ?>&pack_id=<?php echo $_GET['pack_id']; ?>" method="POST">
                         <div class="booking-form-wrap">
-                           <!-- <div class="booking-content">
-                              <div class="form-title">
-                                 <span>1</span>
-                                 <h3>Your Details</h3>
-                              </div>
-                              <div class="row">
-                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                       <label>First name*</label>
-                                       <input type="text" class="form-control" name="firstname_booking">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                       <label>Last name*</label>
-                                       <input type="text" class="form-control" name="lastname_booking">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                       <label>Email*</label>
-                                       <input type="email" class="form-control" name="email_booking">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                       <label>Confirm Email*</label>
-                                       <input type="email" class="form-control" name="email_booking">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                       <label>Phone*</label>
-                                       <input type="text" class="form-control" name="lastname_booking">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div> -->
+                           
                            <div class="booking-content">
                               <div class="form-title">
                                  <span>1</span>
@@ -114,7 +83,7 @@
                                  <div class="col-12">
                                     <div class="form-group">
                                        <label>Name on card*</label>
-                                       <input type="text" class="form-control" name="firstname_booking">
+                                       <input type="text" class="form-control" name="card_Name">
                                     </div>
                                  </div>
                                  <div class="col-12">
@@ -164,22 +133,37 @@
                                        </div>
                                     </div>
                                  </div>
-                              </div>
-                              
-                           </div>
-                           
+                              </div>        
+                           </div>                         
                            <div class="form-policy">
                               <h3>Cancellation policy</h3>
                               <div class="form-group">
                                  <label class="checkbox-list">
-                                    <input type="checkbox" name="s">
+                                    <input type="checkbox" id="acceptCheckbox" name="acceptCheckbox">
                                     <span class="custom-checkbox"></span>
                                     I accept terms and conditions and general policy.
                                  </label>
                               </div>
-                              <a href="#" class="button-primary">Pay Now</a>
+                              <a href="#" id="payNowButton" class="button-primary" disabled>Pay Now</a>
                            </div>
+
+                           <script>
+                              const acceptCheckbox = document.getElementById("acceptCheckbox");
+                              const payNowButton = document.getElementById("payNowButton");
+
+                              acceptCheckbox.addEventListener("change", function() {
+                                 payNowButton.disabled = !acceptCheckbox.checked;
+                                 if (acceptCheckbox.checked) {
+                                    payNowButton.classList.remove("disabled");
+                                 } else {
+                                    payNowButton.classList.add("disabled");
+                                 }
+                              });
+                           </script>
+
                         </div>
+
+                        </form>
                         <!-- step one form html end -->
                      </div>
                      <div class="col-lg-4">
