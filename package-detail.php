@@ -195,7 +195,7 @@
         // User is logged in and has a user_id, proceed with booking
         // Pass the user_id and pack_id to the booking.html page if needed
         //window.location.href = 'insert_cart.php?user_id=' + userId + '&pack_id=' + packId;
-        window.location.href = 'booking-section.php?user_id=' + userId + '&pack_id=' + packId;
+        //window.location.href = 'booking-section.php?user_id=' + userId + '&pack_id=' + packId;
     } else {
         // User is not logged in or user_id is missing, display error message
         alert('You need to log in to book.');

@@ -71,7 +71,7 @@
                   <div class="row">
                      <div class="col-lg-8 right-sidebar">
                         <!-- step one form html start -->
-                        <forma ction="booking-invoice.php?user_id=<?php echo $_GET['user_id']; ?>&pack_id=<?php echo $_GET['pack_id']; ?>" method="POST">
+                        <form action="booking-invoice.php?user_id=<?php echo $_GET['user_id']; ?>&pack_id=<?php echo $_GET['pack_id']; ?>" method="POST">
                         <div class="booking-form-wrap">
                            
                            <div class="booking-content">
@@ -144,10 +144,11 @@
                                     I accept terms and conditions and general policy.
                                  </label>
                               </div>
-                              <a href="#" id="payNowButton" class="button-primary" disabled>Pay Now</a>
+                              <input type="submit" class="button-primary" name="submit"  value="Pay Now">
+
                            </div>
 
-                           <script>
+                           <!-- <script>
                               const acceptCheckbox = document.getElementById("acceptCheckbox");
                               const payNowButton = document.getElementById("payNowButton");
 
@@ -159,7 +160,7 @@
                                     payNowButton.classList.add("disabled");
                                  }
                               });
-                           </script>
+                           </script> -->
 
                         </div>
 
