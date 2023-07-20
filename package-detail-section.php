@@ -25,6 +25,9 @@ $pack_id = $_GET['pack_id'];
 $query = "SELECT * FROM packages where pack_ID = $pack_id";
 $result = mysqli_query($mysqli, $query);
 
+$query2="SELECT * FROM pack_review WHERE pack_ID = $pack_id";
+$result2 = mysqli_query($mysqli, $query2);
+
 
 if ($result && mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -151,7 +154,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                        <h3 class='comment-title'>3 Reviews</h3>
                        <div class='comment-area-inner'>
                           <ol>
-                             <li>
+                              <li>
                                 <figure class='comment-thumb'>
                                    <img src='assets/images/img20.jpg' alt=''>
                                 </figure>
@@ -168,8 +171,8 @@ if ($result && mysqli_num_rows($result) > 0) {
                                    <p>Officia amet posuere voluptates, mollit montes eaque accusamus laboriosam quisque cupidatat dolor pariatur, pariatur auctor.</p>
                                    <a href='#' class='reply'><i class='fas fa-reply'></i>Reply</a>
                                 </div>
-                             </li>
-                             <li>
+                              </li>
+                              <li>
                                 <ol>
                                    <li>
                                       <figure class='comment-thumb'>
@@ -189,11 +192,35 @@ if ($result && mysqli_num_rows($result) > 0) {
                                          <a href='#' class='reply'><i class='fas fa-reply'></i>Reply</a>
                                       </div>
                                    </li>
-                                </ol>
+                                </ol>";
+                                while($row2 = mysqli_fetch_assoc($result2)){
+                                    $review=$row2['review'];
+                                    $rating=$row2['rating'];
+                                    $subject=$row2['subject'];
+                                    echo "<li>
+                                    <figure class='comment-thumb'>
+                                    <img src='assets/images/img21.jpg' alt=''>
+                                    </figure>
+                                    <div class='comment-content'>
+                                       <div class='comment-header'>
+                                          <h5 class='author-name'>John Doe</h5>
+                                          <span class='post-on'>Jana 10 2020</span>
+                                          <div class='rating-wrap'>
+                                             <div class='rating-start' title='Rated 5 out of 5'>
+                                                <span style='width: 90%'></span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <p>$review</p>
+                                       <a href='#' class='reply'><i class='fas fa-reply'></i>Reply</a>
+                                    </div>
+                                 </li>";
+
+                                }
                              </li>
                           </ol>
                           <ol>
-                             <li>
+                              <li>
                                 <figure class='comment-thumb'>
                                    <img src='assets/images/img22.jpg' alt=''>
                                 </figure>
