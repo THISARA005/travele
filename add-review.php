@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(mysqli_query($conn, $sql)){
         
         echo "<script>
-        window.location.href = 'package-detail.php?user_id=' + $userId+&pack_id=' + $packId;
+        window.location.href = 'package-detail.php?user_id=' + $userId + '&pack_id=' + $packId;
         </script>";
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
