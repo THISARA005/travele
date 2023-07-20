@@ -18,6 +18,7 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
+$user_id = $_GET['user_id'];
 $pack_id = $_GET['pack_id'];
 
 
@@ -214,28 +215,20 @@ if ($result && mysqli_num_rows($result) > 0) {
                        </div>-->
                        <div class='comment-form-wrap'>
                           <h3 class='comment-title'>Leave a Review</h3>
-                          <form class='comment-form'>
+                          <form class='comment-form' action='add-review.php?user_id=" . urlencode($user_id) . "&pack_id=" . urlencode($pack_id) . " ' method='POST'>
                              <div class='full-width rate-wrap'>
-                                <label>Your rating</label>
-                                <div class='procduct-rate'>
-                                   <span></span>
-                                </div>
-                             </div>
+                             <label for='rating'>Enter a number between 1 and 5 (with one decimal place):</label>
+                             <input type='number' id='rating' name='rating' step='0.1' min='1' max='5' required>
+                             
+                             </div> 
                              <p>
-                                <input type='text' name='name' placeholder='Name'>
+                                <input type='text' name='subject' placeholder='Subject' name= 'subject'>
                              </p>
+                           
                              <p>
-                                <input type='text' name='name' placeholder='Last name'>
+                                <input type='text' name='review' placeholder='Add your review' >
                              </p>
-                             <p>
-                                <input type='email' name='email' placeholder='Email'>
-                             </p>
-                             <p>
-                                <input type='text' name='subject' placeholder='Subject'>
-                             </p>
-                             <p>
-                                <textarea rows='6' placeholder='Your review'></textarea>
-                             </p>
+
                              <p>
                                 <input type='submit' name='submit' value='Submit'>
                              </p>

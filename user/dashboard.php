@@ -21,8 +21,7 @@
     <!-- start Container Wrapper -->
     <div id="container-wrapper">
         <!-- Dashboard -->
-        <div id="dashboard" class="dashboard-container">
-           
+        <div id="dashboard" class="dashboard-container">  
             <div class="dashboard-navigation">
                 <!-- Responsive Navigation Trigger -->
                 <div id="dashboard-Navigation" class="slick-nav"></div>
@@ -41,8 +40,7 @@
                                     <a href="blog-personal-list.html?user_id=<?php echo $_GET['user_id']; ?>">See review</a>
                                 </li>
                             </ul>
-                        </li>
-                        
+                        </li>   
                         <li>
                             <a><i class="fas fa-hotel"></i></i>Gallery</a>
                             <ul>
@@ -60,7 +58,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="db-info-wrap">
+            <div class="db-info-wrap" style="margin-left: 0px;">
                 <div class="row">
                     <!-- Item -->
                     <div class="col-xl-3 col-sm-6">
@@ -110,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-6">
                         <div class="dashboard-box table-opp-color-box">
                             <h4>Recent Booking</h4>
@@ -305,7 +303,7 @@
                             </div>
                         </div>
                     </div> 
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="dashboard-box">
@@ -421,7 +419,7 @@
                     <!-- Recent Activity -->
                     <div class="col-lg-7 col-12">
                         <div class="dashboard-box activities-box">
-                            <h4>Recent Activities</h4>
+                            <h4>Your Recent Activities</h4>
                             <ul>
                                 <li>
                                     <i class="far fa-calendar-alt"></i> 

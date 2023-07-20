@@ -57,8 +57,7 @@
                         <?php include 'pack-price-section.php'; ?>
                            <div class="widget-bg booking-form-wrap">
                               <h4 class="bg-title">Booking</h4>
-                              <form class="booking-form" action="booking-section.php?user_id=<?php echo $_GET['user_id']; ?>&pack_id=<?php echo $_GET['pack_id']; ?>" method="POST" >
-                             
+                              <form class="booking-form" action="booking-section.php?user_id=<?php echo $_GET['user_id']; ?>&pack_id=<?php echo $_GET['pack_id']; ?>" method="POST" > 
                                  <div class="row">
                                     <div class="col-sm-12">
                                        <div class="form-group">

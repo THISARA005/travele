@@ -89,10 +89,6 @@ if ($result && mysqli_num_rows($result) > 0) {
         </div>
      </div>";
 
-
-        // Start package section
-    
-        // End package section
     }
 } else {
     echo "No packages found.";

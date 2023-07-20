@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $thumb_image = $_POST['thumb_image'];
     $category = $_POST['category'];
 
+    $Posteddate = date("Y-m-d");
+
     $sql = "INSERT INTO `user_blog` (`title`, `description`, `blog_quote`, `personal_about`, `location`, `gallery`, `thumb_image`, `category`, `user_id`) VALUES ('$title', '$description', '$Quate', '$About', '$location', '$gallery', '$thumb_image', '$category', '$userId')";
 
 
