@@ -28,17 +28,17 @@
                 <div id="dashboard-Navigation" class="slick-nav"></div>
                 <div id="navigation" class="navigation-container">
                     <ul>
-                        <li class="active-menu"><a href="dashboard.html"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                        <li class="active-menu"><a href="dashboard.php?user_id=<?php echo $_GET['user_id']; ?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                         <li><a><i class="fas fa-user"></i>Blog</a>
                             <ul>
                                 <li>
-                                    <a href="testimonial.php?user_id=<?php echo $_GET['user_id']; ?>">Blog List</a>
+                                    <a href="blog-archive.php?user_id=<?php echo $_GET['user_id']; ?>">Blog List</a>
                                 </li>
                                 <li>
                                     <a href="create_blog.php?user_id=<?php echo $_GET['user_id']; ?>"> Write a blog</a>
                                 </li>
                                 <li>
-                                    <a href="blog-personal-list.php?user_id=<?php echo $_GET['user_id']; ?>">See review</a>
+                                    <a href="blog-personal-list.html?user_id=<?php echo $_GET['user_id']; ?>">See review</a>
                                 </li>
                             </ul>
                         </li>

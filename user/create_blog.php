@@ -109,7 +109,7 @@
                                             <select name="location"  required>
                                                 <option value="udawalawa" >Select a location</option>
                                                 <option value="galle" >Galle</option>
-                                                </select>  
+                                            </select>  
                                         </div>
                                     </div>  
                                 </div>

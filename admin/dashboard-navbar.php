@@ -19,7 +19,7 @@
 <body>
     
 
-<div class="dashboard-header sticky-header">
+        <div class="dashboard-header sticky-header">
                 <div class="content-left  logo-section pull-left">
                     <h1><a href="../index.html"><img src="assets/images/logo.png" alt=""></a></h1>
                 </div>
@@ -146,13 +146,14 @@
                 </div>
             </div>
   </div>
-   <script src="assets1/js/jquery-3.2.1.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-   <script src="assets1/js/bootstrap.min.js"></script>
-   <script src="assets1/js/canvasjs.min.js"></script>
-   <script src="assets1/js/counterup.min.js"></script>
-   <script src="assets1/js/jquery.slicknav.js"></script>
-   <script src="assets1/js/dashboard-custom.js"></script>
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/canvasjs.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/counterup.min.js"></script>
+    <script src="assets/js/jquery.slicknav.js"></script>
+    <script src="assets/js/dashboard-custom.js"></script>
 </body>
 
 <!-- Mirrored from cyclonethemes.com/demo/html/padhai/dashboard-addtour.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Feb 2020 09:01:50 GMT -->
