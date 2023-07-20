@@ -237,12 +237,20 @@
   display: flex;
 } 
 
+@mixin inline-flex() {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 @mixin flex($values) {
   -webkit-box-flex: $values;
      -moz-box-flex: $values;
       -webkit-flex: $values;
-      -ms-flex: $values;
-          flex: $values;
+          -ms-flex: $values;
+              flex: $values;
 }
 
 // Flex Flow Direction

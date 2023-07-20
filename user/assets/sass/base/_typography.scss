@@ -213,20 +213,161 @@ a {
 		outline: 0;
 	}
 }
-// default color css
-.bg-red {
-	background-color: #da0c4d;
-	color: $light-color;
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+	&:focus {
+		background-color: darken($light-color, 10%);
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		clip-path: none;
+		color: lighten($dark-color, 10%);
+		display: block;
+		@include font-size(14);
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
 }
-.bg-blue {
-	background-color: #167ee6;
-	color: $light-color;
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
 }
-.bg-purple {
-	background-color: #4c5caf;
-	color: $light-color;
+
+/*--------------------------------------------------------------
+# Others
+--------------------------------------------------------------*/
+
+.container {
+	max-width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
-.bg-green {
-	background-color: #4caf50;
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.section-heading {
+	margin-bottom: 50px;
+	h2 {
+		font-size: 48px;
+    	font-weight: 900;
+    	line-height: 1.1;
+		text-transform: uppercase;
+	}
+	h5 {
+		color: $primary-color;		
+		font-size: 15px;
+	    font-weight: 700;
+	    line-height: 1.2;
+	    margin-bottom: 22px;
+	    text-transform: uppercase;
+	    display: inline-block;
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	@include bp(mdx) {
+		h2 {
+			@include font-size(30);
+		}
+	}
+	@include bp(smx) {
+		margin-bottom: 30px;
+		h2 {
+			@include font-size(24);
+		}
+	}
+}
+.section-heading {
+	.dash-style {
+		padding-left: 80px;
+	    position: relative;
+	    &:before {
+    		background-color: $primary-color;
+    		content: "";
+    		height: 2px;
+    		width: 70px;
+   			margin-right: 10px;
+		    position: absolute;
+		    left: 0;
+		    top: 50%;
+    	}
+	}
+}
+
+.title-icon-divider {
+	color: $secondary-color;
+	line-height: 1;
+	position: relative;
+	margin-top: 25px;
+	&:before,
+	&:after {
+		content: "....";
+		display: inline-block;
+		font-size: 37px;
+		line-height: 0;
+		letter-spacing: 3px;
+	}
+	[class*="fa-"] {
+		font-size: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	~ p {
+		margin-top: 30px;
+	}
+}
+
+.title-icon-divider {
+	@include flexbox();
+	.text-center & {
+		@include justify-content(center);
+	}
+}
+
+.section-heading-white {
 	color: $light-color;
+	.dash-style {
+		color: $light-color;
+		&:before {
+			background-color: $light-color;
+		}
+	}
+	h2,
+	p {
+		color: $light-color;
+	}
+	.title-icon-divider {
+		color: $light-color;
+	}
 }

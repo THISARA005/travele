@@ -1,8 +1,8 @@
 %base-button {
-	@include font-size (16);
-	font-weight: 600;
-	line-height: 1;
+	@include font-size (15);
+	line-height: 1.3;
 	padding: 15px 30px;
+	font-weight: 600;
 	@include bp(smx) {
 		@include font-size(14);
 		padding: 10px 20px;
@@ -13,10 +13,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: none;
-	background-color: $secondary-color;
+	background-color: $primary-color;
 	color: $light-color;
 	cursor: pointer;
-	padding: 12px 30px;
+	padding: 15px 30px;
+	font-weight: 600;
 	@include transition(background-color 0.3s);
     &:hover,
     &:active,
@@ -25,10 +26,21 @@ input[type="submit"] {
     }
 }
 
+
 .button-primary,
 .button-round {
-	@extend %base-button;
+	background-color: $primary-color;
+}
+
+.button-secondary {
 	background-color: $secondary-color;
+}
+
+.button-primary,
+.button-round,
+.button-secondary {
+	@extend %base-button;
+	border: none;
 	color: $light-color;
 	display: inline-block;
 	position: relative;
@@ -44,15 +56,13 @@ input[type="submit"] {
 .outline-primary,
 .outline-round {
 	@extend %base-button;
+	background-color: transparent;
 	border: 2px solid #292929;
+	padding: 13px 30px;
 	color: #292929;
 	display: inline-block;
 	position: relative;
-	padding: 13px 30px;
 	@include transition(background-color 0.3s, border-color 0.3s);
-	@include bp(smx) {
-		padding: 8px 20px;
-	}
 	&:hover,
 	&:focus,
 	&:active {
@@ -68,24 +78,14 @@ input[type="submit"] {
 }
 
 .button-text {
-	color: $title-color;
-	@include font-size(14);
-	text-transform: uppercase;
+	color: $secondary-color;
+	font-weight: 600;
 	position: relative;
+	line-height: 1.3;
 	@include transition(all 0.4s);
-	&:after {
-		content: "\f101";
-		font-family: 'Font Awesome 5 Free';
-		font-weight: 900;
-		margin-left: 6px;
-		@include transition(all 0.4s);
-	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $hover-color;
-		&:after {
-			margin-left: 8px;
-		}
+		color: $primary-color;
 	}
 }

@@ -32,13 +32,13 @@
                         <li><a><i class="fas fa-user"></i>Blog</a>
                             <ul>
                                 <li>
-                                    <a href="testimonial-page.html">Blog List</a>
+                                    <a href="testimonial.php?user_id=<?php echo $_GET['user_id']; ?>">Blog List</a>
                                 </li>
                                 <li>
                                     <a href="create_blog.php?user_id=<?php echo $_GET['user_id']; ?>"> Write a blog</a>
                                 </li>
                                 <li>
-                                    <a href="#">See review</a>
+                                    <a href="blog-personal-list.php?user_id=<?php echo $_GET['user_id']; ?>">See review</a>
                                 </li>
                             </ul>
                         </li>
