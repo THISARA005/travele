@@ -25,8 +25,7 @@ $pack_id = $_GET['pack_id'];
 $query = "SELECT * FROM packages where pack_ID = $pack_id";
 $result = mysqli_query($mysqli, $query);
 
-$query2="SELECT * FROM pack_review WHERE pack_ID = $pack_id";
-$result2 = mysqli_query($mysqli, $query2);
+
 
 
 if ($result && mysqli_num_rows($result) > 0) {
@@ -193,18 +192,32 @@ if ($result && mysqli_num_rows($result) > 0) {
                                       </div>
                                    </li>
                                 </ol>";
-                                while($row2 = mysqli_fetch_assoc($result2)){
+
+                                 $query2="SELECT * FROM pack_review WHERE pack_ID = $pack_id";
+                                 $result2 = mysqli_query($mysqli, $query2);
+
+                                 while($row2 = mysqli_fetch_assoc($result2)){
                                     $review=$row2['review'];
-                                    $rating=$row2['rating'];
+                                    $rating=$row2['ratings'];
                                     $subject=$row2['subject'];
+                                    $date=date("Y-m-d");
+                                    $user_id=$row2['user_ID'];
+
+                                    $query3="SELECT * FROM users WHERE user_ID = $user_id";
+                                    $result3 = mysqli_query($mysqli, $query3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    $fName=$row3['fName'];
+
+                                    
+                                    
                                     echo "<li>
                                     <figure class='comment-thumb'>
                                     <img src='assets/images/img21.jpg' alt=''>
                                     </figure>
                                     <div class='comment-content'>
                                        <div class='comment-header'>
-                                          <h5 class='author-name'>John Doe</h5>
-                                          <span class='post-on'>Jana 10 2020</span>
+                                          <h5 class='author-name'>$fName</h5>
+                                          <span class='post-on'>$date</span>
                                           <div class='rating-wrap'>
                                              <div class='rating-start' title='Rated 5 out of 5'>
                                                 <span style='width: 90%'></span>
@@ -216,7 +229,10 @@ if ($result && mysqli_num_rows($result) > 0) {
                                     </div>
                                  </li>";
 
-                                }
+                                };
+
+                                echo
+                                "
                              </li>
                           </ol>
                           <ol>
