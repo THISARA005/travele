@@ -17,13 +17,12 @@
       <title>Travele | Travel & Tour HTML5 template </title>
 </head>
 <body>
+<form action="add-blog.php?user_id=<?php echo $_GET['user_id']; ?> " method="POST">
     <!-- start Container Wrapper -->
     <div id="container-wrapper">
         <!-- Dashboard -->
         <div id="dashboard" class="dashboard-container">
-            
             <?php include 'dashboard-navbar.php'; ?>
-            <form action="add-blog.php" method="POST">
             <div class="db-info-wrap db-add-tour-wrap">
                 <div class="row">
                     <!-- Listings -->
@@ -32,23 +31,22 @@
                             <div class="custom-field-wrap">
                                 <div class="form-group">
                                     <label>Title</label>
-                                    <input type="text" name="name">
+                                    <input type="text" name="title" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea></textarea>
+                                    <textarea name="description" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Quate</label>
-                                    <textarea></textarea>
+                                    <textarea name="Quate" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Personal About</label>
-                                    <textarea></textarea>
+                                    <textarea name="About" required></textarea>
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="dashboard-box">
                             <h4>Gallery</h4>
                             <div class="custom-field-wrap">
@@ -59,7 +57,7 @@
                                         <div class="upload-input">
                                             <div class="form-group">
                                               <span class="upload-btn">Upload a image</span>
-                                              <input type="file" name="myfile">
+                                              <input type="file" name="gallery" required>
                                             </div>
                                         </div>
                                     </div>
@@ -72,24 +70,30 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label>Select location</label>
-                                            
+                                            <label>Select location</label>  
+                                            <select name="location"  required>
+                                                <option value="" >Select a location</option>
+                                                </select>  
                                         </div>
-                                    </div>
-                                    
+                                    </div>  
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-xl-3">
-                        
+                    <div class="col-lg-4 col-xl-3">   
                         <div class="dashboard-box">
-                            
                             <div class="custom-field-wrap db-pop-field-wrap">
-                                <h4>Keywords</h4>
+                            <h4>Category</h4>
                                 <div class="form-group">
-                                    <input type="text" name="keyword" placeholder="Keywords">
+                                    <select name="category"required >
+                                        <option value="">Select a Category</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                    </select>
                                 </div>
+                            </div>
                             </div>
                             <div class="custom-field-wrap db-cat-field-wrap">
                                 <h4>Category</h4>
@@ -100,39 +104,37 @@
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="custom-input"><input type="checkbox" checked="checked">
+                                    <label class="custom-input"><input type="checkbox" >
                                         <span class="custom-input-field"></span>
                                         hiking
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="custom-input"><input type="checkbox" checked="checked">
+                                    <label class="custom-input"><input type="checkbox" >
                                         <span class="custom-input-field"></span>
                                         Travel Dairies
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="custom-input"><input type="checkbox" checked="checked">
+                                    <label class="custom-input"><input type="checkbox" >
                                         <span class="custom-input-field"></span>
                                         Travelling
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="custom-input"><input type="checkbox" checked="checked">
+                                    <label class="custom-input"><input type="checkbox" >
                                         <span class="custom-input-field"></span>
                                         Trekking
                                     </label>
                                 </div>
-                                <div class="add-btn">
-                                    <a href="#">Add category</a>
-                                </div>
+                                
                             </div>
                             <div class="custom-field-wrap db-media-field-wrap">
                                 <h4>Add image</h4>
                                 <div class="upload-input">
                                     <div class="form-group">
-                                      <span class="upload-btn">Upload a image</span>
-                                      <input type="file" name="myfile">
+                                      <span class="upload-btn" >Upload a image</span>
+                                      <input type="file" name="thumb_image">
                                     </div>
                                 </div>
                             </div>
@@ -149,15 +151,17 @@
                     </div>
                 </div>      
             </div>
-            </form>
+            
             <!-- Content / End -->
             <!-- Copyrights -->
             <div class="copyrights">
                Copyright © 2021 Travele. All rights reserveds.
             </div>
         </div>
+        
         <!-- Dashboard / End -->
     </div>
+</form>
     <!-- end Container Wrapper -->
     <!-- end Container Wrapper -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>

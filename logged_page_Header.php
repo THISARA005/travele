@@ -155,10 +155,11 @@
                               
                            </li>
                            <li class="menu-item-has-children">
-                              <a href="#">Profile</a>
+                              <a href="user/dashboard.php?user_id=<?php echo $_GET['user_id']; ?>">Profile</a>
                               <ul>
+                                 
                               <li>
-                                    <a href="gallery.html">Profile</a>
+                                    <a href="user/dashboard.php?user_id=<?php echo $_GET['user_id']; ?>">Profile</a>
                                  </li>
                               <li>
                                     <a href="gallery.html">Settings</a>

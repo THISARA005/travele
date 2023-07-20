@@ -35,7 +35,7 @@
                                     <a href="testimonial-page.html">Blog List</a>
                                 </li>
                                 <li>
-                                    <a href="add-blog.php"> Write a blog</a>
+                                    <a href="create_blog.php?user_id=<?php echo $_GET['user_id']; ?>"> Write a blog</a>
                                 </li>
                                 <li>
                                     <a href="#">See review</a>
