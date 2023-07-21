@@ -1,4 +1,18 @@
+
 <!doctype html>
+
+<?php
+// Start output buffering
+ob_start();
+
+// Include the specific file that contains the HTML division
+include 'country_analysis.php';
+
+// Get the output and stop buffering
+$divisionContent = ob_get_contents();
+ob_end_clean();
+?>
+
 <html lang="en">
    <head>
       <!-- Required meta tags -->
@@ -593,16 +607,31 @@
                     </div>
                     <div class="col-lg-5 col-md-12 col-xs-12">
                         <div class="dashboard-box report-list">
+                            <form action="revenue_report.php" method="post">
                             <h4>Reports</h4>
                             <div class="report-list-content">
-                                <div class="date">
-                                   <h5>Auguest 12</h5>
-                                </div>
-                                <div class="total-amt">
-                                    <strong>$1250000</strong>
-                                </div>
+            <!-- Date input fields -->
+                            <div class="date">
+                                <label for="startDate">Start Date:</label>
+                                <input type="date" id="startDate" name="startDate">
                             </div>
-                            <div class="table-responsive">
+                            <div class="date">
+                                <label for="endDate">End Date:</label>
+                                <input type="date" id="endDate" name="endDate">
+                            </div>
+                            <!-- Total revenue generated between selected dates -->
+                            <!-- <div class="total-amt">
+                                <label for="endDate" style="font-size: 20px;">Revenue</label>
+                                <strong id="revenueAmount" >$0</strong>
+                            </div> -->
+                            <div>
+
+                            <input type="submit" class="button-primary" name="submit"  value="Generate revenue report">
+                            </div>
+
+                        </div>
+                        </form>
+                            <!-- <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -645,9 +674,11 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                            </div> -->
                         </div>
+                        
                     </div>
+              
                 </div>
                 <div class="row">
                     <!-- site traffic -->
@@ -666,10 +697,12 @@
                     </div>
 
                     <div class="col-lg-4 ">
-                        <div class="dashboard-box">
+                        <div class="dashboard-box chart-box">
+                            
                         <?php include 'country_analysis.php'; ?>
-
-                           <div id="piechart" ></div>
+                           <div id="piechart" style="height: 290px; width: 100%;"></div>
+                        </div>
+       
                         </div>
                     </div>
                 </div>

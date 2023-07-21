@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
                                 <p></p>
-                                <input type="submit" class="button-primary" name="submit" onclick="window.print()" value="Pay Now">
+                                <input type="submit" class="button-primary" name="submit" onclick="window.print()" value="Download the reciept">
                             </div>
                             </div>
                            <div class="col-lg-4">
