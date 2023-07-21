@@ -63,6 +63,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 Print
               </button>";
 
+        // Add a button to redirect to hello.html
+        echo "<a href='dashboard.php' target='_self'>
+                <button style='background-color: #008CBA; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; margin-top: 20px;'>
+                  Go to Dashboard
+                </button>
+              </a>";
+
         echo "</div>"; // Close the center div
     } else {
         echo "No packages found.";
