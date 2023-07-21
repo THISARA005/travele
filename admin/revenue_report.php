@@ -2,89 +2,71 @@
 include 'db_connection.php'; // Include the database connection file
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   // Get the form data
-    $startDate = $_POST['startDate'];    
-    $endDate = $_POST['endDate'];   
- 
-   
+    // Get the form data
+    $startDate = $_POST['startDate'];
+    $endDate = $_POST['endDate'];
 
-   // Insert the form data into the database
-   //$sql = "SELECT * FROM pack_booking WHERE date BETWEEN 'start_date' AND 'end_date'";
-   
+    // Insert the form data into the database
+    $query = "SELECT * FROM pack_booking WHERE billing_date BETWEEN '$startDate' AND '$endDate'";
 
-
-    $query ="SELECT * FROM pack_booking WHERE billing_date BETWEEN '$startDate' AND '$endDate'";
-
-// $query=" SELECT * FROM PACKAGES WHERE pack_ID=$pack_id";
     $result = mysqli_query($conn, $query);
+    $totalRevenue = 0;
 
-    $totalRevenue=0;
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "<div style='text-align: center; border: 1px solid #ccc; padding: 20px; margin: 20px auto; max-width: 600px;'>";
 
-if ($result && mysqli_num_rows($result) > 0) {
-    $numRows = mysqli_num_rows($result);
-    echo "Number of results: " . $numRows;
-    echo "<div class='table-responsive'>
-    <table class='table table-bordered'>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-       ";
-    while ($row = mysqli_fetch_assoc($result)) {
-       
-        $paid_amount=$row['to_pay_amount'];
-        $totalRevenue=$totalRevenue+$paid_amount;
-        $pack_id=$row['pack_ID'];
-        $user_id=$row['user_ID'];
+        // Print the heading
+        echo "<h3 style='text-align: center; text-decoration: underline; margin-bottom: 20px;'>Revenue report from $startDate to $endDate</h3>";
 
-        $query1=" SELECT * FROM PACKAGES WHERE pack_ID=$pack_id";
-        $result1 = mysqli_query($conn, $query1);
-        $row1 = mysqli_fetch_assoc($result1);
-        $pack_name=$row1['title'];
-      
-       echo " <tbody>
-        <tr>
-            <td>$user_id</td>
-            <td>$pack_name </td>
-            <td>$paid_amount</td>
-        </tr>
-        <tbody>
-        ";
-        
+        // Print the table with borders
+        echo "
+        <table style='width: 100%; border-collapse: collapse;'>
+            <thead>
+                <tr style='border: 1px solid #000;'>
+                    <th style='border: 1px solid #000;'>ID</th>
+                    <th style='border: 1px solid #000;'>Name</th>
+                    <th style='border: 1px solid #000;'>Amount</th>
+                </tr>
+            </thead>
+            <tbody>";
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            $paid_amount = $row['to_pay_amount'];
+            $totalRevenue = $totalRevenue + $paid_amount;
+            $pack_id = $row['pack_ID'];
+            $user_id = $row['user_ID'];
+
+            $query1 = "SELECT * FROM PACKAGES WHERE pack_ID=$pack_id";
+            $result1 = mysqli_query($conn, $query1);
+            $row1 = mysqli_fetch_assoc($result1);
+            $pack_name = $row1['title'];
+
+            echo "
+                <tr style='border: 1px solid #000;'>
+                    <td style='border: 1px solid #000;'>$user_id</td>
+                    <td style='border: 1px solid #000;'>$pack_name</td>
+                    <td style='border: 1px solid #000;'>$paid_amount</td>
+                </tr>";
+        }
+
+        echo "</tbody>
+            </table>";
+
+        // Print the total revenue
+        echo "<h3 style='text-align: center; text-decoration: underline; margin-top: 20px;'>Total Revenue</h3>";
+        echo "<div style='text-align: center;'>
+            <strong>$$totalRevenue</strong>
+        </div>";
+
+        // Print the button to print the window
+        echo "<button onclick='window.print()' style='background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; margin-top: 20px;'>
+                Print
+              </button>";
+
+        echo "</div>"; // Close the center div
+    } else {
+        echo "No packages found.";
     }
-
-
-// Remember to close the database connection
-
-
-
-
-   echo "
- <div class='col-lg-5 col-md-12 col-xs-12'>
-   <div class='dashboard-box report-list'>
-       <h4>Reports</h4>
-       <div class='report-list-content'>
-           <div class='date'>
-              <h5>$startDate ' - ' $endDate</h5>
-           </div>
-           <div class='total-amt'>
-               <strong>$$totalRevenue</strong>
-           </div>
-       </div>
-       <!-- Button to print the window -->
-<button onclick='window.print()' style='background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px;'>
-    Print
-</button>
-";
-
-      
-} else {
-    echo "No packages found.";
-}
 }
 mysqli_close($conn);
 ?>
-
