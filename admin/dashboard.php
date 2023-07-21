@@ -257,7 +257,7 @@ ob_end_clean();
                     <div class="col-lg-6">
                         <div class="dashboard-box table-opp-color-box">
                             <h4>Recent Booking</h4>
-                            <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                            <p>Airtport  The Right Way To Start A Short Break Holiday</p>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -270,7 +270,7 @@ ob_end_clean();
                                             <th>Enquiry</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <!-- <tbody>
                                         <tr>
                                             <td>
                                                 <label class="custom-input"><input type="checkbox" checked="checked">
@@ -286,67 +286,8 @@ ob_end_clean();
                                                 <span class="badge badge-success">15</span>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-input"><input type="checkbox" checked="checked">
-                                                <span class="custom-input-field"></span></label>
-                                            </td>
-                                            <td><span class="list-img"><img src="assets/images/comment2.jpg" alt=""></span>
-                                            </td>
-                                            <td><span class="list-enq-name">John Doe</span>
-                                            </td>
-                                            <td>12 may</td>
-                                            <td>Japan</td>
-                                            <td>
-                                                <span class="badge badge-success">15</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-input"><input type="checkbox" checked="checked">
-                                                <span class="custom-input-field"></span></label>
-                                            </td>
-                                            <td><span class="list-img"><img src="assets/images/comment3.jpg" alt=""></span>
-                                            </td>
-                                            <td><span class="list-enq-name">John Doe</span>
-                                            </td>
-                                            <td>12 may</td>
-                                            <td>Japan</td>
-                                            <td>
-                                                <span class="badge badge-success">15</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-input"><input type="checkbox" checked="checked">
-                                                <span class="custom-input-field"></span></label>
-                                            </td>
-                                            <td><span class="list-img"><img src="assets/images/comment4.jpg" alt=""></span>
-                                            </td>
-                                            <td><span class="list-enq-name">John Doe</span>
-                                            </td>
-                                            <td>12 may</td>
-                                            <td>Japan</td>
-                                            <td>
-                                                <span class="badge badge-success">15</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-input"><input type="checkbox" checked="checked">
-                                                <span class="custom-input-field"></span></label>
-                                            </td>
-                                            <td><span class="list-img"><img src="assets/images/comment5.jpg" alt=""></span>
-                                            </td>
-                                            <td><span class="list-enq-name">John Doe</span>
-                                            </td>
-                                            <td>12 may</td>
-                                            <td>Japan</td>
-                                            <td>
-                                                <span class="badge badge-success">15</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    </tbody> -->
+                                    <?php include 'recent_bookings.php'; ?>
                                 </table>
                             </div>
                         </div>
@@ -606,79 +547,28 @@ ob_end_clean();
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12 col-xs-12">
-                        <div class="dashboard-box report-list">
-                            <form action="revenue_report.php" method="post">
+                    <div class="dashboard-box report-list">
+                        <form action="revenue_report.php" method="post">
                             <h4>Reports</h4>
                             <div class="report-list-content">
-            <!-- Date input fields -->
-                            <div class="date">
-                                <label for="startDate">Start Date:</label>
-                                <input type="date" id="startDate" name="startDate">
+                                <!-- Date input fields -->
+                                <div class="date" style="margin-bottom: 1rem;">
+                                    <label for="startDate">Start Date:</label>
+                                    <input type="date" id="startDate" name="startDate">
+                                </div>
+                                <div class="date" style="margin-bottom: 1rem;">
+                                    <label for="endDate">End Date:</label>
+                                    <input type="date" id="endDate" name="endDate">
+                                </div>
+                                
+                                <div>
+                                    <input type="submit" class="button-primary" name="submit" value="Generate revenue report">
+                                </div>
                             </div>
-                            <div class="date">
-                                <label for="endDate">End Date:</label>
-                                <input type="date" id="endDate" name="endDate">
-                            </div>
-                            <!-- Total revenue generated between selected dates -->
-                            <!-- <div class="total-amt">
-                                <label for="endDate" style="font-size: 20px;">Revenue</label>
-                                <strong id="revenueAmount" >$0</strong>
-                            </div> -->
-                            <div>
-
-                            <input type="submit" class="button-primary" name="submit"  value="Generate revenue report">
-                            </div>
-
-                        </div>
                         </form>
-                            <!-- <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2356</td>
-                                            <td>dummy text </td>
-                                            <td>6,200.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4589</td>
-                                            <td>Lorem Ipsum</td>
-                                            <td>6,500.00</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td>3269</td>
-                                            <td>specimen book</td>
-                                            <td>6,800.00</td>
-                                        </tr>                                                    
-                                        <tr>
-                                            <td>5126</td>
-                                            <td>Letraset sheets</td>
-                                            <td>7,200.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7425</td>
-                                            <td>PageMaker</td>
-                                            <td>5,900.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7425</td>
-                                            <td>PageMaker</td>
-                                            <td>5,900.00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div> -->
-                        </div>
-                        
                     </div>
-              
+                </div>
+
                 </div>
                 <div class="row">
                     <!-- site traffic -->
