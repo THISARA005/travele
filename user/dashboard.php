@@ -58,7 +58,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="db-info-wrap" style="margin-left: 0px;">
+            <div class="db-info-wrap" style="margin-left: 300px;">
                 <div class="row">
                     <!-- Item -->
                     <div class="col-xl-3 col-sm-6">
