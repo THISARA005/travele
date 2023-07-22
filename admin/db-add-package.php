@@ -21,7 +21,7 @@
     <div id="container-wrapper">
         <!-- Dashboard -->
         <div id="dashboard" class="dashboard-container">
-            <?php include 'adminHeader.php'; ?>
+           
             <?php include 'dashboard-navbar.php'; ?>
             <div class="db-info-wrap db-add-tour-wrap">
                 <div class="row">
@@ -121,15 +121,11 @@
                                             <label>Select Map</label>
                                             <select>
                                                 <option>Google Map</option>
+                                                <option> Galle</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label>API key</label>
-                                            <input type="text" name="apikey">
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -202,9 +198,7 @@
                                         Walking
                                     </label>
                                 </div>
-                                <div class="add-btn">
-                                    <a href="#">Add category</a>
-                                </div>
+                                
                             </div>
                             <div class="custom-field-wrap db-media-field-wrap">
                                 <h4>Add image</h4>
@@ -215,6 +209,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="custom-field-wrap db-media-field-wrap">
+                            <div class="form-group">
+            <label class="custom-input">
+                <input type="checkbox" name="active_status" value="1">
+                <span class="custom-input-field"></span>
+                Active Status
+            </label>
+        </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>      

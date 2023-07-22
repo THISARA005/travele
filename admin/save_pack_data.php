@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             VALUES ('$title', '$pack_description', $grpSize, $duration_days, $duration_nights, '$pack_category', $sale_price, $reg_price, $discount, $populer, '$keyword', '$pack_image','$rating')";
     
     if (mysqli_query($conn, $sql)) {
-        echo "Data stored successfully in the 'packages' table.";
+        echo "<script>  window.location.href = 'dashboard.php'; </script>";
     } else {
         echo "Error: " . mysqli_error($conn);
     }

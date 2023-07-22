@@ -21,8 +21,7 @@
     <!-- start Container Wrapper -->
     <div id="container-wrapper">
   
-        <!-- Dashboard -->
-        <div id="dashboard" class="dashboard-container">
+      
           
         
             <?php include 'user-dashboard-navbar.php'; ?>

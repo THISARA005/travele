@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    VALUES ($packId, $userId, '$check_in_date', '$fName', '$email', '$phone', '$card_number', '$policy','1');
     ";
 
-
+    $updateBookingQuery = " UPDATE packages SET status = '1' WHERE pack_ID = $packId  ";
+    mysqli_query($mysqli, $updateBookingQuery);
 
    
     

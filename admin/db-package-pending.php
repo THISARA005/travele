@@ -17,9 +17,12 @@
       <title>Travele | Travel & Tour HTML5 template </title>
 </head>
 <body>
-    
 
-        <div class="dashboard-header sticky-header">
+    <!-- start Container Wrapper -->
+    <div id="container-wrapper">
+        <!-- Dashboard -->
+        <div id="dashboard" class="dashboard-container">
+            <div class="dashboard-header sticky-header">
                 <div class="content-left  logo-section pull-left">
                     <h1><a href="../index.html"><img src="assets/images/logo.png" alt=""></a></h1>
                 </div>
@@ -150,7 +153,7 @@
                 <div id="dashboard-Navigation" class="slick-nav"></div>
                 <div id="navigation" class="navigation-container">
                     <ul>
-                        <li><a href="dashboard.php"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                        <li><a href="dashboard.html"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                         <li><a><i class="fas fa-user"></i>Users</a>
                             <ul>
                                 <li>
@@ -168,9 +171,9 @@
                         <li class="active-menu">
                             <a><i class="fas fa-hotel"></i></i>packages</a>
                             <ul>
-                                <li><a href="db-package-active.php">Active</a></li>
-                                <li><a href="db-package-pending.php">Pending</a></li>
-                               
+                                <li><a href="db-package-active.html">Active</a></li>
+                                <li><a href="db-package-pending.html">Pending</a></li>
+                                <li><a href="db-package-expired.html">Expired</a></li>
                             </ul>   
                         </li>
                         <li><a href="db-booking.html"><i class="fas fa-ticket-alt"></i> Booking & Enquiry</a></li>
@@ -180,15 +183,127 @@
                     </ul>
                 </div>
             </div>
-  <script src="assets/js/jquery-3.2.1.min.js"></script>
+            <div class="db-info-wrap db-package-wrap">
+                <div class="dashboard-box table-opp-color-box">
+                    <h4>Packages List</h4>
+                    <p>Nonummy hac atque adipisicing donec placeat pariatur quia ornare nisl.</p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>Destination</th>
+                                    <th>status</th>
+                                    <th>action</th>
+                                </tr>
+                            </thead>
+                            <!-- <tbody>
+                                <tr>
+                                    <td>
+                                        </span><span class="package-name">Singapore Holiday Tour</span>
+                                    </td>
+                                    <td>12 may</td>
+                                    <td>Japan</td>
+                                    <td><span class="badge badge-primary">Pending</span></td>
+                                    <td>
+                                        <span class="badge badge-success"><i class="far fa-edit"></i></span>
+                                        <span class="badge badge-danger"><i class="far fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        </span><span class="package-name">New Year‘s Eve in Paris</span>
+                                    </td>
+                                    <td>12 may</td>
+                                    <td>Japan</td>
+                                    <td><span class="badge badge-primary">Pending</span></td>
+                                    <td>
+                                        <span class="badge badge-success"><i class="far fa-edit"></i></span>
+                                        <span class="badge badge-danger"><i class="far fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        </span><span class="package-name">Paris Honeymoon Tour</span>
+                                    </td>
+                                    <td>12 may</td>
+                                    <td>Japan</td>
+                                    <td><span class="badge badge-primary">Pending</span></td>
+                                    <td>
+                                        <span class="badge badge-success"><i class="far fa-edit"></i></span>
+                                        <span class="badge badge-danger"><i class="far fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        </span><span class="package-name">Japan Holiday Tour</span>
+                                    </td>
+                                    <td>12 may</td>
+                                    <td>Japan</td>
+                                    <td><span class="badge badge-primary">Pending</span></td>
+                                    <td>
+                                        <span class="badge badge-success"><i class="far fa-edit"></i></span>
+                                        <span class="badge badge-danger"><i class="far fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        </span><span class="package-name">California Trip</span>
+                                    </td>
+                                    <td>12 may</td>
+                                    <td>Japan</td>
+                                    <td><span class="badge badge-primary">Pending</span></td>
+                                    <td>
+                                        <span class="badge badge-success"><i class="far fa-edit"></i></span>
+                                        <span class="badge badge-danger"><i class="far fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        </span><span class="package-name">Dubai Tour</span>
+                                    </td>
+                                    <td>12 may</td>
+                                    <td>Japan</td>
+                                    <td><span class="badge badge-primary">Pending</span></td>
+                                    <td>
+                                        <span class="badge badge-success"><i class="far fa-edit"></i></span>
+                                        <span class="badge badge-danger"><i class="far fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+                            <?php require_once 'pending-package-list.php'; ?>
+                        </table>
+                    </div>
+                </div>
+                <!-- pagination html -->
+                <div class="pagination-wrap">
+                    <nav class="pagination-inner">
+                        <ul class="pagination disabled">
+                            <li class="page-item"><span class="page-link"><i class="fas fa-chevron-left"></i></span></li>
+                            <li class="page-item"><a href="#" class="page-link active">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Content / End -->
+            <!-- Copyrights -->
+            <div class="copyrights">
+               Copyright © 2021 Travele. All rights reserveds.
+            </div>
+        </div>
+        <!-- Dashboard / End -->
+    </div>
+    <!-- end Container Wrapper -->
+    <!-- *Scripts* -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/canvasjs.min.js"></script>
-    <script src="assets/js/chart.js"></script>
     <script src="assets/js/counterup.min.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/dashboard-custom.js"></script>
 </body>
-
-<!-- Mirrored from cyclonethemes.com/demo/html/padhai/dashboard-addtour.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Feb 2020 09:01:50 GMT -->
 </html>

@@ -47,7 +47,7 @@
                <div class="inner-shape"></div>
             </section>
 
-            <?php include 'dashboard-navbar.php'; ?>
+            <?php include 'user-dashboard-navbar.php'; ?>
 
             <!-- Inner Banner html end-->
             <div class="archive-section blog-archive" style="margin-left: 300px;">
