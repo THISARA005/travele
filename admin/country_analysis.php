@@ -1,5 +1,19 @@
 <?php
-require_once 'db_connection.php';
+// Assuming you have established a database connection ($mysqli)
+
+// Database connection configuration
+$host = 'localhost';     // MySQL server hostname
+$username = 'root';  // MySQL username
+$password = '';  // MySQL password
+$database = 'goglobetravel';  // MySQL database name
+
+// Create a new MySQLi object
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+  // You can handle the connection error gracefully based on your requirements
+  exit();
+}
 
 // Fetch data from the database
 $sql = "SELECT country, COUNT(*) AS count FROM users GROUP BY country";

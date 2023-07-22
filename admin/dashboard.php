@@ -257,7 +257,7 @@ ob_end_clean();
                     <div class="col-lg-6">
                         <div class="dashboard-box table-opp-color-box">
                             <h4>Recent Booking</h4>
-                            <p>Airtport  The Right Way To Start A Short Break Holiday</p>
+                            <p>Last 5 Bokking history.</p>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
