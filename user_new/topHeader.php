@@ -27,11 +27,43 @@
 <body>
 <header id="masthead" class="site-header header-primary">
             <!-- header html start -->
-          
-           
-      
+            <div class="top-header">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-8 d-none d-lg-block">
+                        <div class="header-contact-info">
+                           <ul>
+                              <li>
+                                 <a href="#"><i class="fas fa-phone-alt"></i> +94 76 130 2240</a>
+                              </li>
+                              <li>
+                                 <a href="mailto:info@Travel.com"><i class="fas fa-envelope"></i> company@domain.com</a>
+                              </li>
+                              <li>
+                                 <i class="fas fa-map-marker-alt"></i> 76/2, Nugegoda, Sri Lanka
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
+                        <div class="header-social social-links">
+                           <ul>
+                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                           </ul>
+                        </div>
+                        <div class="header-search-icon">
+                           <button class="search-icon">
+                              <i class="fas fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
             <div class="bottom-header">
-            
                <div class="container d-flex justify-content-between align-items-center">
                   <div class="site-identity">
                      <p class="site-title">
@@ -151,36 +183,35 @@
                               </ul>
                            </li>
                            <li class="menu-item-has-children">
-                              <a href="#">Notifications</a>
-                              
-                           </li>
-                           <li class="menu-item-has-children">
-                              <a href="user_new/dashboard.php?user_id=<?php echo $_GET['user_id']; ?>">Profile</a>
+                              <a href="about.html">About us</a>
                               <ul>
-                                 
-                              <li>
-                                    <a href="user_new/dashboard.php?user_id=<?php echo $_GET['user_id']; ?>">Profile</a>
-                                 </li>
-                              <li>
-                                    <a href="gallery.html">Settings</a>
+                              
+                                 <li>
+                                    <a href="service.html">Our Services</a>
                                  </li>
                                  <li>
-                                    <a href="destination.php">Log Out</a>
+                                    <a href="contact.html">Contact us</a>
                                  </li>
-                                 
-                                
+                                 <li>
+                                    <a href="faq.html">FAQ's </a>
+                                 </li>
                               </ul>
                            </li>
-                      
                            
                         </ul>
                      </nav>
-                  
-                 
+                  </div>
+                  <div class="header-btn">
+                     <a href="normal_user_registration.html" class="button-primary">Register Now</a>
+                  </div>
+                  <div class="header-btn">
+                     <a href="login.html" class="button-primary" >Login</a>
+                  </div>
                </div>
             </div>
             <div class="mobile-menu-container"></div>
          </header>
+         
    <!-- Add any JavaScript or script links here -->
    <script src="assets/js/jquery.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
