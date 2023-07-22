@@ -47,7 +47,10 @@ $jsonData = json_encode($data);
         ]);
 
         var options = {
-            title: 'Country Analysis'
+            title: 'Country Analysis',
+            titleTextStyle: {
+          fontSize: 18 // Set the desired font size here
+        }
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

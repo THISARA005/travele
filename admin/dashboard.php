@@ -580,18 +580,18 @@ ob_end_clean();
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="dashboard-box chart-box">
-                           <h4>Bar Chart</h4>
-                           <div id="barchart" style="height: 250px; width: 100%;"></div>
-                        </div>
-                    </div>
+                    <div class="dashboard-box chart-box">
+                        <?php include 'stacked_coluumn.php'; ?>
+                        <div id="columnchart" style="height: 290px; width: 100%; margin-top: 0px;"></div>
 
-                    <div class="col-lg-4 ">
-                        <div class="dashboard-box chart-box">
-                            
+</div>
+                        
+              
+
+                    <div class="col-lg-4 ">        
                         <?php include 'country_analysis.php'; ?>
-                           <div id="piechart" style="height: 290px; width: 100%;"></div>
-                        </div>
+                           <div id="piechart" style="height: 290px; width: 300px; margin-top: 50px; margin-left: 100px;"></div>
+                        
        
                         </div>
                     </div>
