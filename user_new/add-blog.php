@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($insert_blog_sql) === TRUE) {
         // Blog data inserted successfully
         // Redirect to a success page or any other page you prefer
-        header("Location: success_page.php");
+        header("blog-archive.php?user_id=$userId");
         exit;
     } else {
         // Handle database insertion error if necessary
