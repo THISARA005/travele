@@ -2,7 +2,8 @@
 
 //load.php
 
-$connect = new PDO('mysql:host=localhost;dbname=testing', 'root', '');
+$connect = new PDO('mysql:host=localhost;dbname=goglobetravel', 'root', '');
+require_once 'db_connection.php';
 
 $data = array();
 
