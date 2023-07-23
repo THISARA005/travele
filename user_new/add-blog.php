@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handle thumbnail image upload
     $thumb_image = '';
     if (!empty($_FILES['thumb_image']['name'])) {
-        $image_upload_dir = "path_to_your_upload_directory/"; // Update this with your upload directory path
+        $image_upload_dir = "uploads1/"; // Update this with your upload directory path
         $thumb_image = basename($_FILES['thumb_image']['name']);
         $thumb_image_tmp = $_FILES['thumb_image']['tmp_name'];
         $thumb_image_path = $image_upload_dir . $thumb_image;
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handle multiple image uploads
     $gallery = '';
     if (!empty($_FILES['gallery']['name'][0])) {
-        $image_upload_dir = "path_to_your_upload_directory/"; // Update this with your upload directory path
+        $image_upload_dir = "uploads1/"; // Update this with your upload directory path
         $img_names = $_FILES['gallery']['name'];
         $img_tmps = $_FILES['gallery']['tmp_name'];
 

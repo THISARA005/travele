@@ -25,7 +25,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <article class='post'>
            <figure class='feature-image'>
               <a href='#'>
-                 <img src=$thumb_image alt=''>
+                 <img src='uploads1/$thumb_image' alt=''>
               </a>
            </figure>
            <div class='entry-content'>
