@@ -188,7 +188,6 @@ ob_end_clean();
                             <ul>
                                 <li><a href="db-package-active.php">Active</a></li>
                                 <li><a href="db-package-pending.php">Pending</a></li>
-                               
                             </ul>   
                         </li>
                         <li><a href="db-booking.html"><i class="fas fa-ticket-alt"></i> Booking & Enquiry</a></li>

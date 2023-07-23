@@ -51,7 +51,7 @@
                                 <li><a href="db-package-expired.html">Expired</a></li>
                             </ul>   
                         </li>
-                        <li><a href="db-add-package.html"><i class="fas fa-umbrella-beach"></i>Add destination</a></li>
+                        
                         <li><a href="db-booking.html"><i class="fas fa-ticket-alt"></i> Booking History</a></li>
                         <li><a href="user-edit.html"><i class="fas fa-sign-out-alt"></i> Change Profile</a></li>
                         <li><a href="db-wishlist.html"><i class="far fa-heart"></i>Enquiry</a></li>

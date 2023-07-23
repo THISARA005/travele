@@ -18,7 +18,7 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-
+$user_id = $_GET['user_id'];
 $query = "SELECT * FROM packages ORDER BY ratings DESC LIMIT 3";
 $result = mysqli_query($mysqli, $query);
 
@@ -82,12 +82,44 @@ if ($result && mysqli_num_rows($result) > 0) {
                  <div class='btn-wrap'>
                  <a href='#' class='button-text width-6' onclick='checkLogin($pack_id)'>Read more<i class='fas fa-arrow-right'></i></a>
 
-                    <a href='#' class='button-text width-6'>Wish List<i class='far fa-heart'></i></a>
+                 <a href='#' class='button-text width-6' onclick='addToWishlist($pack_id,$user_id)'>Wishlist<i class='far fa-heart'></i></a>
                  </div>
               </div>
            </div>
         </div>
-     </div>";
+     </div>
+     <!-- Add this script section to the end of your HTML file, before the closing </body> tag -->
+     <script>
+     function addToWishlist(pack_id) {
+         // Send an AJAX request to the server
+         var xhr = new XMLHttpRequest();
+         xhr.open('POST', 'add_to_wishlist.php', true);
+         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+         
+         // You may want to pass additional data along with the pack_id if needed
+         var data = 'pack_id='' + pack_id;
+         
+         xhr.onreadystatechange = function() {
+             if (xhr.readyState === XMLHttpRequest.DONE) {
+                 if (xhr.status === 200) {
+                     // The request was successful
+                     // You can show a success message or update the UI here if needed
+                     console.log('Package added to wishlist.');
+                 } else {
+                     // The request failed
+                     // You can show an error message here if needed
+                     console.error('Failed to add package to wishlist.');
+                 }
+             }
+         };
+         
+         // Send the request with the data
+         xhr.send(data);
+     }
+     </script>
+     
+     
+     ";
 
     }
 } else {

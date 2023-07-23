@@ -223,56 +223,7 @@
                      <div class="row">
 
                     <?php include 'package_section.php'; ?>
-                        <!--
-                        <div class="col-lg-4 col-md-6">
-                           <div class="package-wrap">
-                              <figure class="feature-image">
-                                 <a href="package-detail.php">
-                                    <img src="assets/images/img5.jpg" alt="">
-                                 </a>
-                              </figure>
-                              <div class="package-price">
-                                 <h6>
-                                    <span>$1,900 </span> / per person
-                                 </h6>
-                              </div>
-                              <div class="package-content-wrap">
-                                 <div class="package-meta text-center">
-                                    <ul>
-                                       <li>
-                                          <i class="far fa-clock"></i>
-                                          7D/6N
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-user-friends"></i>
-                                          People: 5
-                                       </li>
-                                       <li>
-                                          <i class="fas fa-map-marker-alt"></i>
-                                          Galle
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="package-content">
-                                    <h3>
-                                       <a href="#">Sunset view of beautiful lakeside resident</a>
-                                    </h3>
-                                    <div class="review-area">
-                                       <span class="review-text">(25 reviews)</span>
-                                       <div class="rating-start" title="Rated 5 out of 5">
-                                          <span style="width: 60%"></span>
-                                       </div>
-                                    </div>
-                                    <p>Embrace the serene beauty of a lakeside residence as the sun sets. Witness the captivating view, where the tranquil waters and vibrant skies create a magical ambiance. Immerse yourself in the moment and let the breathtaking sunset scene leave you in awe.</p>
-                                    <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6" onclick="checkLogin()">Book Now<i class="fas fa-arrow-right"></i></a>
-                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                       <div class="col-lg-4 col-md-6">
+                        
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
