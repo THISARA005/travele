@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-   <head>
+<head>
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
 <body>
 
     <!-- start Container Wrapper -->
-
+    <div id="container-wrapper">
         <!-- Dashboard -->
         <div id="dashboard" class="dashboard-container">
            
@@ -63,12 +63,8 @@
            
             <!-- Content / End -->
             <!-- Copyrights -->
-           
-        </div>
-        <!-- Dashboard / End -->
-    </div>
-    <!-- end Container Wrapper -->
-    <!-- *Scripts* -->
+</div>
+     
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

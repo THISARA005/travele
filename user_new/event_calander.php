@@ -100,10 +100,10 @@
  </head>
  <body>
   <br />
-  <h2 align="center"><a href="#">Jquery Fullcalandar Integration with PHP and Mysql</a></h2>
+  <h2 align="center"><a href="#">Event Calander</a></h2>
   <br />
-  <div class="container">
-   <div id="calendar"></div>
-  </div>
+
+   <div id="calendar" style="margin-left: 30px; margin-bottom: 120px;"></div>
+
  </body>
 </html>

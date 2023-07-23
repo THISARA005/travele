@@ -17,7 +17,8 @@
       <title>Travele | Travel & Tour HTML5 template </title>
 </head>
 <body>
-<form action="add-blog.php?user_id=<?php echo $_GET['user_id']; ?>" method="POST">
+    
+<form action="add-blog.php?user_id=<?php echo $_GET['user_id']; ?>" method="POST" enctype="multipart/form-data">
     <!-- start Container Wrapper -->
     <div id="container-wrapper">
         <!-- Dashboard -->
@@ -27,17 +28,17 @@
                 <div id="dashboard-Navigation" class="slick-nav"></div>
                 <div id="navigation" class="navigation-container">
                     <ul>
-                        <li class="active-menu"><a href="dashboard.html"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                        <li class="active-menu"><a href="dashboard.php?user_id=<?php echo $_GET['user_id']; ?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                         <li><a><i class="fas fa-user"></i>Blog</a>
                             <ul>
                                 <li>
-                                    <a href="add-blog.php">Blog List</a>
+                                    <a href="blog-archive.php?user_id=<?php echo $_GET['user_id']; ?>">Blog List</a>
                                 </li>
                                 <li>
-                                    <a href="create_blog.php"> Write a blog</a>
+                                    <a href="create_blog.php?user_id=<?php echo $_GET['user_id']; ?>"> Write a blog</a>
                                 </li>
                                 <li>
-                                    <a href="new-user.html">See review</a>
+                                    <a href="blog-personal-list.html?user_id=<?php echo $_GET['user_id']; ?>">See review</a>
                                 </li>
                             </ul>
                         </li>
@@ -50,14 +51,16 @@
                                 <li><a href="db-package-expired.html">Expired</a></li>
                             </ul>   
                         </li>
-                        <li><a href="db-add-package.html"><i class="fas fa-umbrella-beach"></i>Add destination</a></li>
+                        
                         <li><a href="db-booking.html"><i class="fas fa-ticket-alt"></i> Booking History</a></li>
+                        <li><a href="user-edit.html"><i class="fas fa-sign-out-alt"></i> Change Profile</a></li>
                         <li><a href="db-wishlist.html"><i class="far fa-heart"></i>Enquiry</a></li>
-                        <li><a href="db-comment.html"><i class="fas fa-comments"></i>Badges</a></li>
+                        <li><a href="db-comment.html"><i class="fas fa-comments"></i>Badges</a></li>        
                         <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
+        </div>
             <div class="db-info-wrap db-add-tour-wrap">
                 <div class="row">
                     <!-- Listings -->
@@ -91,8 +94,8 @@
                                         <p>or</p>
                                         <div class="upload-input">
                                             <div class="form-group">
-                                              <span class="upload-btn">Upload a image</span>
-                                              <input type="file" name="gallery" required>
+                                                <span class="upload-btn">Upload images</span>
+                                                <input type="file" name="gallery[]" multiple required>
                                             </div>
                                         </div>
                                     </div>
@@ -123,9 +126,9 @@
                                 <div class="form-group">
                                     <select name="category"required >
                                         <option value="">Select a Category</option>
-                                        <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="C">C</option>
+                                        <option value="A">Solo travel</option>
+                                        <option value="B">Family trip</option>
+                                        <option value="C">Romance Trip</option>
                                         <option value="D">D</option>
                                     </select>
                                 </div>
@@ -166,7 +169,7 @@
                                 
                             </div>
                             <div class="custom-field-wrap db-media-field-wrap">
-                                <h4>Add image</h4>
+                                <h4>Add thumbnail image</h4>
                                 <div class="upload-input">
                                     <div class="form-group">
                                       <span class="upload-btn" >Upload a image</span>
@@ -191,9 +194,11 @@
                Copyright © 2021 Travele. All rights reserveds.
             </div>
         </div>
+    </div>
+</div>
         
         <!-- Dashboard / End -->
-    </div>
+   
 </form>
     <!-- end Container Wrapper -->
     <!-- end Container Wrapper -->

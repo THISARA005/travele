@@ -4,30 +4,48 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
       <!-- favicon -->
-      <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+      <link rel="icon" type="image/png" href="assets/images/favicon.png">
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all">
+      <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" media="all">
       <!-- Fonts Awesome CSS -->
-      <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/vendors/fontawesome/css/all.min.css">
+      <!-- jquery-ui css -->
+      <link rel="stylesheet" type="text/css" href="assets/vendors/jquery-ui/jquery-ui.min.css">
+      <!-- modal video css -->
+      <link rel="stylesheet" type="text/css" href="assets/vendors/modal-video/modal-video.min.css">
+      <!-- light box css -->
+      <link rel="stylesheet" type="text/css" href="assets/vendors/lightbox/dist/css/lightbox.min.css">
+      <!-- slick slider css -->
+      <link rel="stylesheet" type="text/css" href="assets/vendors/slick/slick.css">
+      <link rel="stylesheet" type="text/css" href="assets/vendors/slick/slick-theme.css">
       <!-- google fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
       <!-- Custom CSS -->
       <link rel="stylesheet" type="text/css" href="style.css">
       <title>Travele | Travel & Tour HTML5 template </title>
-</head>
-<body>
+   </head>
+   <body>
+        <div id="siteLoader" class="site-loader">
+            <div class="preloader-content">
+                <img src="assets/images/loader1.gif" alt="">
+            </div>
+        </div>
+    <div id="page" class="full-page">
+        <main id="content" class="site-main">
+            <!-- Inner Banner html start-->
+            
 
-    <!-- start Container Wrapper -->
-    <div id="container-wrapper">
-  
-      
-          
-        
             <?php include 'user-dashboard-navbar.php'; ?>
-            <div class="db-info-wrap">
-                <div class="row">
-                    <!-- Item -->
+
+            
+            
+            
+
+        </main>
+        <div class="db-info-wrap">
+                <!-- <div class="row">
                     <div class="col-xl-3 col-sm-6">
                         <div class="db-info-list">
                             <div class="dashboard-stat-icon bg-blue">
@@ -39,7 +57,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item -->
                     <div class="col-xl-3 col-sm-6">
                         <div class="db-info-list">
                             <div class="dashboard-stat-icon bg-green">
@@ -51,7 +68,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item -->
                     <div class="col-xl-3 col-sm-6">
                         <div class="db-info-list">
                             <div class="dashboard-stat-icon bg-purple">
@@ -383,7 +399,6 @@
                     </div>  
                 </div>
                 <div class="row">      
-                    <!-- Recent Activity -->
                     <div class="col-lg-7 col-12">
                         <div class="dashboard-box activities-box">
                             <h4>Recent Activities</h4>
@@ -486,7 +501,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- site traffic -->
+                  
                     <div class="col-lg-4">
                         <div class="dashboard-box chart-box">
                            <h4>Site Traffic</h4>
@@ -501,32 +516,30 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 ">
+                    <div class="col-lg-4 chart-box">
                         <div class="dashboard-box">
-                        
-
-                           <div id="piechart" ></div>
+                           <h4>Search Engine</h4>
+                           <div id="piechart" style="height: 250px; width: 100%;"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Content / End -->
-            <!-- Copyrights -->
-            <div class="copyrights">
-               Copyright © 2021 Travele. All rights reserveds.
-            </div>
-        </div>
-        <!-- Dashboard / End -->
+                </div> -->
+                <?php include 'event_calander.php'; ?>
+
+        </div>   
     </div>
-    <!-- end Container Wrapper -->
-    <!-- *Scripts* -->
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/canvasjs.min.js"></script>
-    <script src="assets/js/chart.js"></script>
-    <script src="assets/js/counterup.min.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/dashboard-custom.js"></script>
-</body>
+
+      <!-- JavaScript -->
+      <script src="assets/js/jquery.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+      <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/vendors/jquery-ui/jquery-ui.min.js"></script>
+      <script src="assets/vendors/countdown-date-loop-counter/loopcounter.js"></script>
+      <script src="assets/js/jquery.counterup.js"></script>
+      <script src="assets/vendors/modal-video/jquery-modal-video.min.js"></script>
+      <script src="assets/vendors/masonry/masonry.pkgd.min.js"></script>
+      <script src="assets/vendors/lightbox/dist/js/lightbox.min.js"></script>
+      <script src="assets/vendors/slick/slick.min.js"></script>
+      <script src="assets/js/jquery.slicknav.js"></script>
+      <script src="assets/js/custom.min.js"></script>
+   </body>
 </html>

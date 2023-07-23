@@ -55,45 +55,16 @@
                   <div class="container">
                      <div class="row">
                         <div class="col-lg-8 primary right-sidebar">
-                           <!-- blog post item html start -->
+                           
                            <div class="grid row">
-                              <!-- <div class="grid-item col-md-6">
-                                 <article class="post">
-                                    <figure class="feature-image">
-                                       <a href="#">
-                                          <img src="assets/images/img17.jpg" alt="">
-                                       </a>
-                                    </figure>
-                                    <div class="entry-content">
-                                       <h3>
-                                          <a href="#">Life is a beautiful journey not a destination</a>
-                                       </h3>
-                                       <div class="entry-meta">
-                                          <span class="byline">
-                                             <a href="#">Demoteam</a>
-                                          </span>
-                                          <span class="posted-on">
-                                             <a href="#">August 17, 2021</a>
-                                          </span>
-                                          <span class="comments-link">
-                                             <a href="#">No Comments</a>
-                                          </span>
-                                       </div>
-                                       <p>Embrace the serene beauty of a lakeside residence as the sun sets. Witness the captivating view, where the tranquil waters and vibrant skies create a magical ambiance. Immerse yourself in the moment and let the breathtaking sunset scene leave you in awe.</p>
-                                       <a href="#" class="button-text">CONTINUE READING..</a>
-                                    </div>
-                                 </article>
-                              </div> -->
+                              
                               <?php include 'blog-section.php'; ?>
 
                               
                               
                             
                            </div>
-                           <!-- blog post item html end -->
-                           <!-- pagination html start-->
                            
-                           <!-- pagination html start-->
                         </div>
                        
                      </div>
@@ -101,29 +72,7 @@
                </div>
             </div>
             <div class="post-navigation-wrap" style="text-align: center;" style="margin-left: 500px;" >
-   <nav>
-      <ul class="pagination" style="list-style-type: none; padding: 0; margin: 0;">
-         <li style="display: inline-block; margin: 0 5px; border: 2px solid red; border-radius: 50%; padding: 10px 15px; font-size: 18px;">
-            <a href="#" style="color: black; text-decoration: none;">
-               <i class="fas fa-arrow-left"></i>
-            </a>
-         </li>
-         <li class="active" style="display: inline-block; margin: 0 5px; border: 2px solid red; border-radius: 50%; padding: 10px 15px; font-size: 18px; background-color: red; color: white;">
-            <a href="#" style="color: white; text-decoration: none;">1</a>
-         </li>
-         <li style="display: inline-block; margin: 0 5px; border: 2px solid red; border-radius: 50%; padding: 10px 15px; font-size: 18px;">
-            <a href="#" style="color: black; text-decoration: none;">..</a>
-         </li>
-         <li style="display: inline-block; margin: 0 5px; border: 2px solid red; border-radius: 50%; padding: 10px 15px; font-size: 18px;">
-            <a href="#" style="color: black; text-decoration: none;">5</a>
-         </li>
-         <li style="display: inline-block; margin: 0 5px; border: 2px solid red; border-radius: 50%; padding: 10px 15px; font-size: 18px;">
-            <a href="#" style="color: black; text-decoration: none;">
-               <i class="fas fa-arrow-right"></i>
-            </a>
-         </li>
-      </ul>
-   </nav>
+   
 </div>
 
          </main>
