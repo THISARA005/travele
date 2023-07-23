@@ -64,7 +64,7 @@
      var title = event.title;
      var id = event.id;
      $.ajax({
-      url:"update.php",
+      url:"update_event.php",
       type:"POST",
       data:{title:title, start:start, end:end, id:id},
       success:function()
